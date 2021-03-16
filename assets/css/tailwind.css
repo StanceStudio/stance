@@ -11,9 +11,7 @@ textarea {
 
 .page-enter-active,
 .page-leave-active {
-    @apply transition-opacity;
-
-    transition-duration: 650ms;
+    @apply transition-opacity duration-500;
 }
 
 .page-enter,
@@ -25,6 +23,63 @@ textarea {
     scroll-margin-top: 2em;
 }
 
-.rich-text a {
-    @apply border-b border-current;
+em {
+    @apply italic;
+}
+
+.rich-text {
+    ul,
+    ol,
+    p {
+        @apply mb-8;
+
+        @screen lg {
+            @apply text-xl leading-relaxed;
+        }
+    }
+
+    h4 {
+        @apply uppercase text-lg font-bold tracking-wide mb-8;
+    } 
+      
+    ul {
+        @apply list-disc;
+    }
+
+    ol {
+        @apply list-decimal;
+    }
+    
+    ol,
+    ul {
+        @apply list-inside;
+    }
+
+    @screen lg {
+      @apply text-5xl;
+    }
+}
+
+.rich-text--lg  {
+    ul,
+    ol,
+    p {
+        @apply text-2xl mb-8;
+    }
+
+    h1,
+    h2,
+    h3 {
+        @apply font-serif text-3xl mb-8;
+    }
+}
+
+.links {
+    a {
+        @apply border-current hover:text-magenta transition-colors;
+    }
+
+    a:not([href^="mailto"]) {
+        @apply border-b;
+    }
 }

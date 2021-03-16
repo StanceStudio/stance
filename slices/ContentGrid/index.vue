@@ -1,5 +1,5 @@
 <template>
-  <section class="section pt-20 lg:pt-24 pb-8 lg:pb-8 px-8 text-center" :class="`bg-${slice.primary.backgroundColor}`">
+  <section class="section pt-20 lg:pt-24 pb-8 lg:pb-8 px-8 text-center" :class="background[slice.primary.backgroundColor]">
     <header>
       <prismic-rich-text
         :field="slice.primary.subheading"
@@ -34,5 +34,14 @@ export default {
       },
     },
   },
+
+  data() {
+    return {
+      background: {
+        'magenta-light' : 'bg-magenta-light',
+        'white' : 'bg-white'
+      }
+    }
+  }
 }
 </script>

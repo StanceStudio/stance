@@ -8,7 +8,7 @@
           <h2 class="font-serif text-center text-4xl lg:text-6xl mb-4 lg:mb-8">{{ $prismic.asText(data.heading) }}</h2>
             <prismic-rich-text
                 :field="data.text"
-                class="lg:text-2xl py-3 w-2/3 lg:w-full mx-auto text-center rich-text font-medium"
+                class="links lg:text-3xl py-3 w-2/3 lg:w-full mx-auto text-center font-medium"
             />
         </div>
         

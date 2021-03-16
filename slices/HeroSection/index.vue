@@ -33,17 +33,9 @@ export default {
 <style scoped>
 .section {
   min-height: 70vh;
-}
 
-.section {
   @screen lg {
     @apply min-h-screen;
   }
 }
-
-/* @screen lg {
-  .section {
-    @apply min-h-screen;
-  }
-} */
 </style>

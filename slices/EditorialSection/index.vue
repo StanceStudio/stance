@@ -4,20 +4,20 @@
     :style="sectionStyles"
   >
     <div class="lg:w-10/12 mx-auto px-8">
-      <header class="mb-8 lg:mb-16 lg:mt-2">
+      <header class="mb-8 lg:mb-16 lg:mt-2" v-if="$prismic.asText(slice.primary.heading) !==''">
         <prismic-rich-text
           :field="slice.primary.heading"
           class="font-serif text-center text-3xl lg:text-6xl lg:leading-tight"
         />
       </header>
-      <div class="lg:flex items-center pt-5 lg:-mx-12">
+      <div class="lg:flex items-center lg:-mx-12">
           <div class="lg:w-1/2 lg:px-12" :class="!slice.primary.image.url ? 'pb-0': 'pb-10'">
             <prismic-image v-if="slice.primary.image.url" :field="slice.primary.image"/>
           </div>
           <div class="lg:w-1/2 lg:px-12">
               <prismic-rich-text
                 :field="slice.primary.text"
-                class="lg:text-2xl py-3 font-medium"
+                class="rich-text links lg:text-2xl py-3 font-medium"
               />
               <prismic-rich-text
                 v-if="$prismic.asText(slice.primary.altText) !==''"

@@ -50,7 +50,7 @@ nav.is-open {
 }
 
 nav ul {
-  @apply flex-col flex -mr-3 font-serif text-5xl pt-24 px-4 leading-tight;
+  @apply flex-col flex -mr-4 font-serif text-5xl pt-24 leading-tight;
 }
 
 @screen lg {

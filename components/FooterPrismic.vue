@@ -2,7 +2,7 @@
   <footer class="site-footer absolute w-full">
       <div class="flex flex-wrap justify-between lg:w-11/12 mx-auto py-4 lg:py-8 items-center px-8">
         <nuxt-link to="/" class="logo w-20 lg:w-24"><StanceLogo /></nuxt-link>
-        <div class="text-xs lg:text-xl text-right lg:text-center font-semibold w-2/3">
+        <div class="text-xs lg:text-xl text-right lg:text-center font-semibold">
           Designing a Sustainable Future Faster
         </div>
         <div class="text-xs lg:text-sm ml-auto lg:ml-0 mt-2 uppercase font-medium">

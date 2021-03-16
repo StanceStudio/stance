@@ -17,7 +17,7 @@
     <div class="my-4 text-md lg:text-xl" v-if="$prismic.asText(slice.primary.ctaText) !==''">
       <prismic-link 
         :field="slice.primary.link"
-        class="border-b border-current pb-1 hover:text-magenta transition-colors "
+        class="border-b border-current pb-1 hover:text-magenta font-bold transition-colors"
       >
         {{ $prismic.asText(slice.primary.ctaText) }}
       </prismic-link>
