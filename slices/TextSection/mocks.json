@@ -1,0 +1,65 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "TextSection",
+    "primary": {
+      "text": [
+        {
+          "type": "heading2",
+          "text": "Deploy innovative ROI",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "Nostrud et anim irure anim voluptate non in aliquip pariatur aute exercitation velit. Eiusmod quis ullamco laboris officia.",
+          "spans": []
+        },
+        {
+          "type": "heading2",
+          "text": "Morph efficient synergies",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "Nulla occaecat elit dolore ullamco minim qui excepteur ad magna nulla commodo velit ut id aliquip. Reprehenderit consequat ut eiusmod in labore quis proident anim excepteur incididunt fugiat.",
+          "spans": []
+        },
+        {
+          "type": "heading2",
+          "text": "Synthesize proactive vortals",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "Dolor ipsum ipsum anim in fugiat ut aliquip nostrud deserunt velit consectetur. Et velit dolore non laboris eiusmod ad pariatur sunt adipisicing ipsum incididunt quis quis nostrud ullamco. Ipsum excepteur ad enim.",
+          "spans": []
+        },
+        {
+          "type": "heading2",
+          "text": "Generate collaborative metrics",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "Adipisicing ex ut dolor esse aliqua aute culpa. Magna consequat irure mollit proident fugiat sint aliquip non culpa reprehenderit elit. Consectetur fugiat esse ad amet velit sit velit aute dolor elit.",
+          "spans": []
+        },
+        {
+          "type": "heading2",
+          "text": "Scale transparent bandwidth",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "Excepteur quis magna ad nostrud adipisicing veniam veniam. Commodo nostrud incididunt sit ex ipsum voluptate elit quis. Amet commodo duis ullamco minim culpa proident labore qui nostrud.",
+          "spans": []
+        }
+      ]
+    },
+    "items": [],
+    "slice_type": "text_section"
+  }
+]

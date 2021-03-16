@@ -1,0 +1,78 @@
+{
+  "id": "text_grid",
+  "type": "SharedSlice",
+  "name": "TextGrid",
+  "description": "TextGrid",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TextGrid",
+      "primary": {
+        "heading": {
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "backgroundColor": {
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "magenta-light"
+            ],
+            "default_value": "white"
+          },
+          "type": "Select"
+        }
+      },
+      "items": {
+        "text": {
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading3,paragraph,em,hyperlink,list-item,o-list-item,heading4"
+          },
+          "type": "StructuredText"
+        },
+        "ctaText": {
+          "config": {
+            "label": "CTA Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "ctaLink": {
+          "config": {
+            "label": "CTA Link",
+            "placeholder": "",
+            "allowTargetBlank": true
+          },
+          "type": "Link"
+        },
+        "removeMargin": {
+          "config": {
+            "label": "Remove Bottom Margin",
+            "placeholder": "",
+            "default_value": "no",
+            "options": [
+              "no",
+              "yes"
+            ]
+          },
+          "type": "Select"
+        }
+      }
+    }
+  ]
+}

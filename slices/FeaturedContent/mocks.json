@@ -1,0 +1,47 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "FeaturedContent",
+    "primary": {
+      "subheading": [
+        {
+          "type": "heading3",
+          "text": "Syndicate granular web services",
+          "spans": []
+        }
+      ],
+      "heading": [
+        {
+          "type": "heading2",
+          "text": "Exploit value-added experiences",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.prismic.io/stance/e4962ae2-9a48-4ca7-bd94-e84b0481fd2b_fade.png?w=900&h=500&fit=crop"
+      },
+      "ctaText": [
+        {
+          "type": "paragraph",
+          "text": "Est elit deserunt amet anim.",
+          "spans": []
+        }
+      ],
+      "link": {
+        "link_type": "Web",
+        "url": "https://prismic.io"
+      }
+    },
+    "items": [],
+    "slice_type": "featured_content"
+  }
+]

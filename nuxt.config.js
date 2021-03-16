@@ -1,15 +1,12 @@
 import smConfig from "./sm.json";
 
-if (!smConfig.apiEndpoint) {
-  console.warn("Looks like Slice Machine hasn't been bootstraped already.\nCheck the `Getting Started` section of the README file :)");
-}
-
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: "static",
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: "slice-library-starter-nuxt",
+    title: "Stance",
     meta: [{
       charset: "utf-8"
     }, {
@@ -27,28 +24,63 @@ export default {
     }]
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: [
+    "@/assets/css/fonts.css",
+    "@/assets/css/tailwind.css"
+  ],
+
+  loading: { color: '#292929', throttle: 0 },
+
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: [
+    {
+      src: "~/plugins/prismicLinks",
+      ssr: false
+    },
+  ],
+
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
+
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: [],
+  buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/svg", "@nuxtjs/google-fonts"],
+
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [["@nuxtjs/prismic", {
     endpoint: smConfig.apiEndpoint || "",
-    apiOptions: {
-      routes: [{
-        type: "page",
-        path: "/:uid"
-      }]
-    }
-  }], ["nuxt-sm"]],
+    disableGenerator: false,
+    linkResolver: "@/plugins/link-resolver",
+    htmlSerializer: "@/plugins/html-serializer",
+    // apiOptions: {
+    //   routes: [{
+    //     type: "page",
+    //     path: "/:uid"
+    //   }]
+    // }
+  }], ["nuxt-sm"], ["vue-screen/nuxt"]],
+
   generate: {
     fallback: true
   },
+
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     transpile: ["vue-slicezone", "nuxt-sm"]
-  }
+  },
+
+  storybook: {
+    stories: ["~/slices/**/*.stories.js"]
+  },
+  
+  ignore: ["**/*.stories.js"],
+
+  googleFonts: {
+    families: {
+      Manrope: [400, 500, 600],
+    }
+  },
+
+  screen: {
+    extend: 'tailwind',
+  },
 };

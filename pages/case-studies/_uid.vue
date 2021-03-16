@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slice-zone type="page" :uid="$route.params.uid" class="min-h-screen" />
+    <slice-zone type="case_study" :uid="$route.params.uid" class="min-h-screen" />
     <page-footer :data="footer" />
     <footer-prismic />
   </div>
@@ -20,7 +20,7 @@ export default {
 
   async asyncData({ $prismic, params, error }) {
       try {
-        const result = (await $prismic.api.getByUID('page', params.uid)).data
+        const result = (await $prismic.api.getByUID('case_study', params.uid)).data
 
         return {
             // Page content

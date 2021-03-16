@@ -1,0 +1,37 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "QuoteSection",
+    "primary": {
+      "quote": [
+        {
+          "type": "paragraph",
+          "text": "Fugiat excepteur qui anim sint sit tempor. Fugiat eu amet culpa. Consequat velit ut adipisicing non voluptate ut pariatur ad commodo amet minim quis excepteur non.",
+          "spans": []
+        }
+      ],
+      "caption": [
+        {
+          "type": "paragraph",
+          "text": "Minim mollit excepteur consectetur. Veniam ipsum aliquip minim pariatur et consequat irure Lorem consectetur reprehenderit adipisicing amet occaecat anim.",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.prismic.io/stance/e4962ae2-9a48-4ca7-bd94-e84b0481fd2b_fade.png?w=900&h=500&fit=crop"
+      },
+      "backgroundColor": "magenta-light"
+    },
+    "items": [],
+    "slice_type": "quote_section"
+  }
+]

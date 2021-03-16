@@ -1,0 +1,66 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "ListSection",
+    "primary": {
+      "heading": [
+        {
+          "type": "heading2",
+          "text": "Architect out-of-the-box infrastructures",
+          "spans": []
+        }
+      ]
+    },
+    "items": [
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Mollit est dolor ad velit eiusmod voluptate ut labore cillum eu aliqua et.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Aliquip Lorem nisi occaecat aliqua fugiat non consectetur elit cillum nulla ullamco nisi proident fugiat.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Mollit sint amet duis incididunt. Esse pariatur ex officia officia aliquip enim magna.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Magna consectetur dolore Lorem anim incididunt fugiat et reprehenderit in irure dolor velit. Deserunt laboris commodo ut laborum consectetur do sunt. Nostrud aliquip fugiat magna eu excepteur minim eiusmod eu.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Nulla eu dolore enim commodo irure ad officia elit fugiat labore do adipisicing magna.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "slice_type": "list_section"
+  }
+]

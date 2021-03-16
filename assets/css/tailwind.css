@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    @apply appearance-none rounded-none transition-colors 
+}
+
+.page-enter-active,
+.page-leave-active {
+    @apply transition-opacity;
+
+    transition-duration: 650ms;
+}
+
+.page-enter,
+.page-leave-to {
+    @apply opacity-0
+}
+
+[id] {
+    scroll-margin-top: 2em;
+}
+
+.rich-text a {
+    @apply border-b border-current;
+}

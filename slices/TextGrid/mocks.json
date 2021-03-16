@@ -1,0 +1,106 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "TextGrid",
+    "primary": {
+      "heading": [
+        {
+          "type": "heading2",
+          "text": "Streamline bricks-and-clicks architectures",
+          "spans": []
+        }
+      ],
+      "backgroundColor": "white"
+    },
+    "items": [
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Nulla sint anim ut commodo. Nisi minim esse excepteur non ipsum est nostrud pariatur deserunt duis reprehenderit elit minim.",
+            "spans": []
+          }
+        ],
+        "ctaText": [
+          {
+            "type": "paragraph",
+            "text": "Ex ut velit pariatur quis ea. Esse aliquip incididunt fugiat sunt deserunt quis nulla eiusmod. Do occaecat laborum nulla.",
+            "spans": []
+          }
+        ],
+        "ctaLink": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "removeMargin": "no"
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Incididunt ut voluptate laborum adipisicing incididunt. Duis veniam voluptate amet elit Lorem. Commodo fugiat non cillum eu consectetur cupidatat ea dolore ex anim Lorem magna velit adipisicing nostrud.",
+            "spans": []
+          }
+        ],
+        "ctaText": [
+          {
+            "type": "paragraph",
+            "text": "Nostrud dolor magna aliqua incididunt. Veniam commodo consequat fugiat incididunt aute tempor ut elit consequat. Velit ullamco officia culpa enim nostrud pariatur mollit Lorem incididunt sit fugiat sit dolore incididunt laborum.",
+            "spans": []
+          }
+        ],
+        "ctaLink": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "removeMargin": "yes"
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Proident id eu dolore enim ullamco dolor in.",
+            "spans": []
+          }
+        ],
+        "ctaText": [
+          {
+            "type": "paragraph",
+            "text": "Officia officia adipisicing ex aliquip velit aute amet. Voluptate anim dolore eu dolore est consequat tempor laborum est qui culpa cillum eiusmod duis do.",
+            "spans": []
+          }
+        ],
+        "ctaLink": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "removeMargin": "no"
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Deserunt adipisicing duis anim in dolore velit reprehenderit excepteur ipsum magna sit ullamco aute pariatur veniam. Laborum sit qui irure velit officia officia irure. Cillum non non occaecat officia tempor sit officia.",
+            "spans": []
+          }
+        ],
+        "ctaText": [
+          {
+            "type": "paragraph",
+            "text": "Irure reprehenderit officia tempor dolore eiusmod nulla exercitation incididunt ad laboris sint. Sit dolore exercitation duis amet.",
+            "spans": []
+          }
+        ],
+        "ctaLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "removeMargin": "yes"
+      }
+    ],
+    "slice_type": "text_grid"
+  }
+]

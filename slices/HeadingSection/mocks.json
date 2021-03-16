@@ -1,0 +1,25 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "HeadingSection",
+    "primary": {
+      "heading": [
+        {
+          "type": "heading2",
+          "text": "Unleash sexy schemas",
+          "spans": []
+        },
+        {
+          "type": "heading2",
+          "text": "Benchmark ubiquitous functionalities",
+          "spans": []
+        }
+      ]
+    },
+    "items": [],
+    "slice_type": "heading_section"
+  }
+]
