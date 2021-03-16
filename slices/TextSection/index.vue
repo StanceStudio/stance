@@ -24,9 +24,13 @@ export default {
 .rich-text ul,
 .rich-text ol,
 .rich-text p {
-  @apply text-2xl mb-8 ;
+  @apply text-2xl mb-8;
+}
 
-  @screen lg {
+@screen lg {
+  .rich-text ul,
+  .rich-text ol,
+  .rich-text p {
     @apply text-xl leading-relaxed;
   }
 }
@@ -35,8 +39,12 @@ export default {
 .rich-text h2,
 .rich-text h3 {
   @apply font-serif text-3xl mb-8;
+}
 
-  @screen lg {
+@screen lg {
+  .rich-text h1,
+  .rich-text h2,
+  .rich-text h3 {
     @apply text-5xl;
   }
 }

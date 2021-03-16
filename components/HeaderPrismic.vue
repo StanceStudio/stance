@@ -37,8 +37,10 @@ export default {
 <style scoped>
 nav {
   @apply opacity-0 fixed inset-0 pointer-events-none transition-all duration-500;
+}
 
-  @screen lg {
+@screen lg {
+  nav {
     @apply ml-auto relative flex opacity-100 pointer-events-auto;
   }
 }
@@ -49,8 +51,10 @@ nav.is-open {
 
 nav ul {
   @apply flex-col flex -mr-3 font-serif text-5xl pt-24 px-4 leading-tight;
+}
 
-  @screen lg {
+@screen lg {
+  nav ul {
     @apply flex-row text-xl font-body pt-0;
   }
 }

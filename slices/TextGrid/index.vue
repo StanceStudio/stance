@@ -37,8 +37,10 @@ export default {
 <style>
 .grid-item h3 {
   @apply font-serif text-3xl mb-8;
+}
 
-  @screen lg {
+@screen lg {
+  .grid-item h3 {
     @apply text-6xl;
   }
 }
