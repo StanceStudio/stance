@@ -31,7 +31,7 @@ em {
     ul,
     ol,
     p {
-        @apply mb-8;
+        @apply text-sm mb-8;
 
         @screen lg {
             @apply text-xl leading-relaxed;
@@ -54,9 +54,13 @@ em {
     ul {
         @apply list-inside;
     }
+}
 
-    @screen lg {
-      @apply text-5xl;
+.rich-text {
+    ul:last-child,
+    ol:last-child,
+    p:last-child {
+        @apply mb-0;
     }
 }
 

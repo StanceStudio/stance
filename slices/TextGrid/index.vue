@@ -1,12 +1,12 @@
 <template>
-  <section class="section py-16 lg:py-22" :class="background[slice.primary.backgroundColor]">
+  <section class="section py-16 lg:py-20" :class="background[slice.primary.backgroundColor]">
     <div class="lg:w-11/12 mx-auto px-8">
       <header v-if="$prismic.asText(slice.primary.heading) !== ''" class="flex justify-center mb-14 lg:mb-24 lg:mt-2">
         <h2 class="font-serif text-center text-3xl lg:text-6xl lg:leading-tight lg:w-2/3">{{ $prismic.asText(slice.primary.heading) }}</h2>
       </header>
       <div class="lg:flex lg:flex-wrap -mx-8">
-        <div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="grid-item lg:w-1/2 px-8 lg:mb-28" :class="item.removeMargin !== 'yes' ? 'mb-28' : 'mb-6'">    
-            <prismic-rich-text :field="item.text" class="links text-xl font-medium leading-relaxed" />
+        <div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="grid-item lg:w-1/2 px-8 lg:mb-28" :class="item.removeMargin !== 'yes' ? 'mb-14' : 'mb-6'">    
+            <prismic-rich-text :field="item.text" class="links text-sm lg:text-xl font-medium leading-relaxed" />
             <div class="mt-6 text-md lg:text-xl" v-if="$prismic.asText(item.ctaText) !== ''">
               <prismic-link 
                 :field="item.ctaLink"

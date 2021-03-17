@@ -1,5 +1,5 @@
 <template>
-  <section class="section py-20 lg:py-24 flex flex-col items-center px-8 text-center">
+  <section class="section py-20 lg:py-20 flex flex-col items-center px-8 text-center">
     <header class="uppercase text-md lg:text-xl mb-8 lg:mb-12 font-bold tracking-wide">
       <prismic-rich-text
         :field="slice.primary.subheading"

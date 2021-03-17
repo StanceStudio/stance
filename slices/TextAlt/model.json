@@ -1,0 +1,36 @@
+{
+  "id": "text_alt",
+  "type": "SharedSlice",
+  "name": "TextAlt",
+  "description": "TextAlt",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TextAlt",
+      "primary": {
+        "text": {
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading2,heading3,heading4,heading5,strong,em,hyperlink,list-item,o-list-item"
+          },
+          "type": "StructuredText"
+        },
+        "aside": {
+          "config": {
+            "label": "Aside",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading4,paragraph"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

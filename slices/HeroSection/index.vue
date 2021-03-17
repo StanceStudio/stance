@@ -5,7 +5,7 @@
   >
     <prismic-rich-text
       :field="slice.primary.heading"
-      class="transition-transform delay-500 lg:w-4/6 mx-auto px-8 text-center text-4xl lg:text-7xl font-serif lg:leading-snug"
+      class="transition-transform delay-500 px-8 lg:w-2/3 mx-auto text-center text-4xl lg:text-7xl font-serif leading-snug lg:leading-tight"
     />
 
     <div class="absolute bottom-0 left-0 w-full text-center my-12 text-2xl font-medium hidden lg:block">
@@ -32,10 +32,6 @@ export default {
 
 <style scoped>
 .section {
-  min-height: 70vh;
-
-  @screen lg {
-    @apply min-h-screen;
-  }
+  min-height: 80vh;
 }
 </style>

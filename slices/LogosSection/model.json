@@ -1,0 +1,36 @@
+{
+  "id": "logos_section",
+  "type": "SharedSlice",
+  "name": "LogosSection",
+  "description": "LogosSection",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "LogosSection",
+      "primary": {
+        "heading": {
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {
+        "logo": {
+          "config": {
+            "label": "Logo",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      }
+    }
+  ]
+}

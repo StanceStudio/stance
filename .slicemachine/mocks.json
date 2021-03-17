@@ -189,5 +189,61 @@
         }
       }
     }
+  },
+  "TextAlt": {
+    "primary": {
+      "text": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 5
+        }
+      },
+      "aside": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
+  },
+  "HeroAlt": {
+    "primary": {
+      "backgroundImage": {
+        "content": "https://images.prismic.io/stance/e4962ae2-9a48-4ca7-bd94-e84b0481fd2b_fade.png"
+      },
+      "heading": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "subheading": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "text": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
+  },
+  "LogosSection": {
+    "primary": {
+      "heading": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "items": {
+      "logo": {
+        "content": "https://images.prismic.io/stance/5d8170d1-ba9e-42a6-8411-446d759f808d_04.1Updates+Header.png"
+      }
+    }
   }
 }

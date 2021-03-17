@@ -1,0 +1,47 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "TextAlt",
+    "primary": {
+      "text": [
+        {
+          "type": "paragraph",
+          "text": "Cillum consequat occaecat elit velit consectetur non nostrud.",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "Ipsum magna quis pariatur occaecat esse consequat incididunt incididunt irure exercitation do nulla.",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "Laborum minim proident consequat.",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "Ea incididunt sint do irure laboris velit. Veniam laborum commodo sit anim. In exercitation incididunt non fugiat culpa pariatur officia tempor nulla deserunt deserunt dolore pariatur.",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "Velit ipsum tempor reprehenderit esse ad nostrud exercitation consectetur. Consectetur id et exercitation ut adipisicing Lorem reprehenderit quis officia in eiusmod Lorem sunt. Ad et est eu ipsum ad pariatur laborum nostrud est.",
+          "spans": []
+        }
+      ],
+      "aside": [
+        {
+          "type": "paragraph",
+          "text": "Sunt ea occaecat ipsum pariatur culpa do consectetur cupidatat duis. Minim qui reprehenderit in commodo proident sint aliqua consequat mollit dolore commodo duis cupidatat irure.",
+          "spans": []
+        }
+      ]
+    },
+    "items": [],
+    "slice_type": "text_alt"
+  }
+]

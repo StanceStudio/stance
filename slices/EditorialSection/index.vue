@@ -1,10 +1,10 @@
 <template>
   <section
-    class="section py-20 lg:py-24 bg-cover bg-center bg-no-repeat"
+    class="section py-20 lg:py-20 bg-cover bg-center bg-no-repeat"
     :style="sectionStyles"
   >
     <div class="lg:w-10/12 mx-auto px-8">
-      <header class="mb-8 lg:mb-16 lg:mt-2" v-if="$prismic.asText(slice.primary.heading) !==''">
+      <header class="mb-8 lg:px-24 lg:mb-24 lg:mt-2" v-if="$prismic.asText(slice.primary.heading) !==''">
         <prismic-rich-text
           :field="slice.primary.heading"
           class="font-serif text-center text-3xl lg:text-6xl lg:leading-tight"
@@ -21,7 +21,7 @@
               />
               <prismic-rich-text
                 v-if="$prismic.asText(slice.primary.altText) !==''"
-                :field="slice.primary.altText" class="lg:text-3xl font-serif py-3"
+                :field="slice.primary.altText" class="lg:text-3xl font-serif mb-8"
               />
               <div class="my-4 text-md lg:text-xl" v-if="$prismic.asText(slice.primary.ctaText) !==''">
                 <prismic-link 

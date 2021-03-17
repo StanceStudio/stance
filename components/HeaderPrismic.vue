@@ -1,11 +1,11 @@
 <template>
   <header class="site-header fixed w-full top-0 left-0 z-10">
-      <div class="flex lg:w-11/12 mx-auto py-6 items-center px-8">
+      <div class="flex lg:w-11/12 mx-auto py-8 lg:py-12 items-center px-8">
         <nuxt-link to="/" class="logo w-24 relative z-10"><StanceLogo /></nuxt-link>
         <nav class="bg-violet lg:bg-transparent" :class="{'is-open' : openNav}">
             <ul>
                 <li v-for="menuLink in $store.state.menu.menu_links" :key="menuLink.id">
-                  <prismic-link :field="menuLink.link" class="py-3 px-4 font-medium hover:text-magenta transition-colors" @click.native="openNav = false">{{ $prismic.asText(menuLink.label) }}</prismic-link>
+                  <prismic-link :field="menuLink.link" class="py-3 px-8 lg:px-4 font-medium hover:text-magenta transition-colors" @click.native="openNav = false">{{ $prismic.asText(menuLink.label) }}</prismic-link>
                 </li>
             </ul>
         </nav>
@@ -62,37 +62,40 @@ nav ul {
 nav.is-open ul li {
   @apply opacity-0;
 
-  transform: translateY(10px);
+  transform: translateY(.3em);
+  animation: fade-in 400ms ease forwards;
+}
+
+nav.is-open ul li:first-child {
   animation-delay: 200ms;
-  animation: fade-in 300ms ease forwards;
 }
 
 nav.is-open ul li:nth-child(2) {
-  animation-delay: 300ms;
+  animation-delay: 350ms;
 }
 
 nav.is-open ul li:nth-child(3) {
-  animation-delay: 400ms;
-}
-
-nav.is-open ul li:nth-child(4) {
   animation-delay: 500ms;
 }
 
+nav.is-open ul li:nth-child(4) {
+  animation-delay: 650ms;
+}
+
 nav.is-open ul li:nth-child(5) {
-  animation-delay: 600ms;
+  animation-delay: 800ms;
 }
 
 nav.is-open ul li:nth-child(6) {
-  animation-delay: 700ms;
+  animation-delay: 950ms;
 }
 
 nav.is-open ul li:nth-child(7) {
-  animation-delay: 700ms;
+  animation-delay: 1100ms;
 }
 
 nav.is-open ul li:nth-child(8) {
-  animation-delay: 700ms;
+  animation-delay: 1250ms;
 }
 
 @keyframes fade-in {
