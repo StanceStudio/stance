@@ -76,7 +76,7 @@ export default {
 
   googleFonts: {
     families: {
-      Manrope: [400, 500, 600],
+      Manrope: [400, 500, 600, 700],
     }
   },
 

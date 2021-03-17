@@ -5,7 +5,7 @@
       :style="sectionStyles"
       >
         <div>
-          <h2 class="font-serif text-center text-4xl lg:text-7xl">{{ $prismic.asText(data.heading) }}</h2>
+          <h2 class="font-serif text-center text-4xl px-10 lg:text-7xl">{{ $prismic.asText(data.heading) }}</h2>
             <prismic-rich-text
                 :field="data.text"
                 class="links lg:text-3xl py-3 w-2/3 lg:w-full mx-auto text-center font-medium"

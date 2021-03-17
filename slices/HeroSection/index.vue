@@ -32,6 +32,6 @@ export default {
 
 <style scoped>
 .section {
-  min-height: 80vh;
+  min-height: 100vh;
 }
 </style>
