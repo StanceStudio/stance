@@ -1,5 +1,5 @@
 <template>
-  <header class="site-header fixed w-full top-0 left-0 z-10">
+  <header class="site-header fixed w-full top-0 left-0 z-10" :class="{'scroll-up': scollingUp, 'scroll-down': scrollingDown, 'menu-active' : openNav}">
       <div class="flex lg:w-11/12 mx-auto py-8 lg:py-12 items-center px-8">
         <nuxt-link @click.native="openNav = false" to="/" class="logo w-24 relative z-10"><StanceLogo /></nuxt-link>
         <nav class="bg-violet lg:bg-transparent" :class="{'is-open' : openNav}">
@@ -28,13 +28,54 @@ export default {
 
   data() {
     return {
-      openNav: false
+      openNav: false,
+      scollingUp: false,
+      scrollingDown: false,
     }
+  },
+
+  mounted() {
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll <= 0) {
+        this.scrollingUp = true
+        return;
+      }
+      
+      if (currentScroll > lastScroll && !this.scrollingDown) {
+        // down
+        this.scrollingDown = true
+        this.scollingUp = false
+      } else if (currentScroll < lastScroll && this.scrollingDown) {
+        // up
+        this.scrollingDown = false
+        this.scollingUp = true
+      }
+      lastScroll = currentScroll;
+    });
   }
 }
 </script>
 
 <style scoped>
+.site-header {
+  @apply transition-all duration-500;
+}
+
+.scroll-down:not(.menu-active) {
+    @apply transform -translate-y-full;
+}
+
+.scroll-up:not(.menu-active) {
+  @apply transform-none;
+}
+
+.nuxt-link-active {
+  @apply text-magenta;
+}
+
 nav {
   @apply opacity-0 fixed inset-0 pointer-events-none transition-all duration-500;
 }
