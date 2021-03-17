@@ -23,7 +23,7 @@
                 v-if="$prismic.asText(slice.primary.altText) !==''"
                 :field="slice.primary.altText" class="lg:text-3xl font-serif mb-8"
               />
-              <div class="my-4 text-md lg:text-xl" v-if="$prismic.asText(slice.primary.ctaText) !==''">
+              <div class="my-4 text-sm lg:text-xl" v-if="$prismic.asText(slice.primary.ctaText) !==''">
                 <prismic-link 
                   :field="slice.primary.ctaLink"
                   class="border-b border-current pb-1 hover:text-magenta transition-colors font-bold"

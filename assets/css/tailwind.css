@@ -39,7 +39,11 @@ em {
     }
 
     h4 {
-        @apply uppercase text-lg font-bold tracking-wide mb-8;
+        @apply uppercase text-sm font-bold tracking-wide mb-8;
+
+        @screen lg {
+            @apply text-lg;
+        }
     } 
       
     ul {
@@ -54,21 +58,23 @@ em {
     ul {
         @apply list-inside;
     }
-}
 
-.rich-text {
-    ul:last-child,
+    /* ul:last-child,
     ol:last-child,
     p:last-child {
         @apply mb-0;
-    }
+    } */
 }
 
 .rich-text--lg  {
     ul,
     ol,
     p {
-        @apply text-2xl mb-8;
+        @apply text-sm mb-8;
+
+        @screen lg {
+            @apply text-2xl mb-8;
+        }
     }
 
     h1,

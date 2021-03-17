@@ -5,7 +5,7 @@
   >
     <prismic-rich-text
       :field="slice.primary.heading"
-      class="transition-transform delay-500 px-8 lg:w-2/3 mx-auto text-center text-4xl lg:text-7xl font-serif leading-snug lg:leading-tight"
+      class="transition-transform delay-500 px-8 lg:w-2/3 mx-auto text-center text-4xl lg:text-7xl font-serif leading-tight lg:leading-tight"
     />
 
     <div class="absolute bottom-0 left-0 w-full text-center my-12 text-2xl font-medium hidden lg:block">

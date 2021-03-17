@@ -10,7 +10,7 @@
       <div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="lg:w-1/2 px-2 mb-12">    
         <prismic-image :field="item.image" />
         <prismic-rich-text :field="item.heading" class="font-serif text-2xl lg:text-4xl mb-8 mt-8 lg:mt-12 md:px-12 xl:px-28 leading-snug" />
-        <div class="my-4 text-md lg:text-xl" v-if="$prismic.asText(item.ctaText) !==''">
+        <div class="my-4 text-sm lg:text-xl" v-if="$prismic.asText(item.ctaText) !==''">
           <prismic-link 
             :field="item.ctaLink"
             class="border-b border-current pb-1 hover:text-magenta transition-colors font-bold"

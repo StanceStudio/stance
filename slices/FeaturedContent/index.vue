@@ -14,7 +14,7 @@
         class="text-2xl lg:text-6xl font-serif mt-8 lg:mt-14 mb-6"
       />
     </div>
-    <div class="my-4 text-md lg:text-xl" v-if="$prismic.asText(slice.primary.ctaText) !==''">
+    <div class="my-4 text-sm lg:text-xl" v-if="$prismic.asText(slice.primary.ctaText) !==''">
       <prismic-link 
         :field="slice.primary.link"
         class="border-b border-current pb-1 hover:text-magenta font-bold transition-colors"

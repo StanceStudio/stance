@@ -1,7 +1,7 @@
 <template>
   <header class="site-header fixed w-full top-0 left-0 z-10">
       <div class="flex lg:w-11/12 mx-auto py-8 lg:py-12 items-center px-8">
-        <nuxt-link to="/" class="logo w-24 relative z-10"><StanceLogo /></nuxt-link>
+        <nuxt-link @click.native="openNav = false" to="/" class="logo w-24 relative z-10"><StanceLogo /></nuxt-link>
         <nav class="bg-violet lg:bg-transparent" :class="{'is-open' : openNav}">
             <ul>
                 <li v-for="menuLink in $store.state.menu.menu_links" :key="menuLink.id">
