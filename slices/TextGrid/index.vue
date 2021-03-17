@@ -7,7 +7,7 @@
       <div class="lg:flex lg:flex-wrap -mx-8">
         <div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="grid-item lg:w-1/2 px-8 lg:mb-28" :class="item.removeMargin !== 'yes' ? 'mb-14' : 'mb-6'">    
             <prismic-rich-text :field="item.text" class="links text-sm lg:text-xl font-medium leading-relaxed" />
-            <div class="mt-6 text-md lg:text-xl" v-if="$prismic.asText(item.ctaText) !== ''">
+            <div class="mt-8 text-sm lg:text-xl" v-if="$prismic.asText(item.ctaText) !== ''">
               <prismic-link 
                 :field="item.ctaLink"
                 class="border-b border-current pb-1 hover:text-magenta transition-colors font-bold"
@@ -46,7 +46,7 @@ export default {
 <style>
 .grid-item {
   h3 {
-    @apply font-serif text-3xl mb-8;
+    @apply font-serif text-3xl mb-8 leading-snug;
   }
 
   h4 {

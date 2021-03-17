@@ -80,7 +80,11 @@ em {
     h1,
     h2,
     h3 {
-        @apply font-serif text-3xl mb-8;
+        @apply font-serif text-2xl mb-8 leading-snug;
+
+        @screen lg {
+            @apply text-5xl;
+        }
     }
 }
 

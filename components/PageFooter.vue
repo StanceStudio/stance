@@ -1,7 +1,7 @@
 <template>
     <section
       v-if="$prismic.asText(data.heading)"
-      class="section py-44 lg:py-60 bg-cover bg-center bg-no-repeat flex flex-column items-center justify-center"
+      class="section py-36 lg:py-60 bg-cover bg-center bg-no-repeat flex flex-column items-center justify-center"
       :style="sectionStyles"
       >
         <div>
