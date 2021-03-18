@@ -1,11 +1,11 @@
 <template>
   <header class="site-header fixed w-full top-0 left-0 z-10" :class="{'scroll-up': scollingUp, 'scroll-down': scrollingDown, 'menu-active' : openNav}">
       <div class="flex lg:w-11/12 mx-auto py-8 lg:py-12 items-center px-8">
-        <nuxt-link @click.native="toggleNav" to="/" class="logo w-24 relative z-10"><StanceLogo /></nuxt-link>
+        <nuxt-link @click.native="openNav = false" to="/" class="logo w-24 relative z-10"><StanceLogo /></nuxt-link>
         <nav class="bg-violet lg:bg-transparent" :class="{'is-open' : openNav}">
             <ul>
                 <li v-for="menuLink in $store.state.menu.menu_links" :key="menuLink.id">
-                  <prismic-link :field="menuLink.link" class="py-3 px-8 lg:px-4 font-medium hover:text-magenta transition-colors" @click.native="toggleNav">{{ $prismic.asText(menuLink.label) }}</prismic-link>
+                  <prismic-link :field="menuLink.link" class="py-3 px-8 lg:px-4 font-medium hover:text-magenta transition-colors" @click.native="openNav = false">{{ $prismic.asText(menuLink.label) }}</prismic-link>
                 </li>
             </ul>
         </nav>
@@ -31,6 +31,13 @@ export default {
       openNav: false,
       scollingUp: false,
       scrollingDown: false,
+    }
+  },
+
+  watch:{
+    $route (){
+        this.scollingUp = false
+        this.scrollingDown = false
     }
   },
 
@@ -60,8 +67,6 @@ export default {
   methods: {
     toggleNav() {
       this.openNav = !this.openNav
-      this.scollingUp = false
-      this.scrollingDown = false
     }
   }
 }
