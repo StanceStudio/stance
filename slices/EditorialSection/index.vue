@@ -15,6 +15,10 @@
             <prismic-image v-if="slice.primary.image.url" :field="slice.primary.image"/>
           </div>
           <div class="lg:w-1/2 lg:px-12">
+            <prismic-rich-text
+                v-if="$prismic.asText(slice.primary.leadText) !==''"
+                :field="slice.primary.leadText" class="lg:text-3xl font-serif mb-8"
+              />
               <prismic-rich-text
                 :field="slice.primary.text"
                 class="rich-text links lg:text-2xl py-3 font-medium"

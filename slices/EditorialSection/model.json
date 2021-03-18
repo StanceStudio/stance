@@ -29,13 +29,21 @@
           "type": "StructuredText"
         },
         "image": {
-          "type": "Image",
           "config": {
-            "id": "image",
-            "label": "",
+            "label": "Image",
             "constraint": {},
             "thumbnails": []
-          }
+          },
+          "type": "Image"
+        },
+        "leadText": {
+          "config": {
+            "label": "Lead Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
         },
         "text": {
           "config": {

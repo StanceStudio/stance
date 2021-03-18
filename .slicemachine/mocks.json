@@ -44,6 +44,12 @@
           "patternType": "PARAGRAPH",
           "blocks": 1
         }
+      },
+      "leadText": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
       }
     }
   },
