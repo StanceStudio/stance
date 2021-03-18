@@ -55,8 +55,12 @@ export default {
 
   computed: {
     sectionStyles() {
+      if (!this.slice.primary.backgroundImage.url) {
+        return
+      }
+      
       return {
-        backgroundImage: this.slice.primary.backgroundImage.url ? `url(${this.slice.primary.backgroundImage.url})` : ''
+        backgroundImage: `url(${this.slice.primary.backgroundImage.url})`
       }
     }
   }
