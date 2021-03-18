@@ -10,10 +10,13 @@
     />
 
     <div
-      class="hero__link opacity-0 absolute bottom-0 left-0 w-full text-center my-12 text-2xl font-medium hidden lg:block"
+      class="hero__cta opacity-0 absolute bottom-0 left-0 w-full text-center my-12 lg:text-2xl font-medium"
       :class="{'opacity-100': loaded}"
       >
-      <prismic-link :field="slice.primary.buttonLink" class="border-b border-current hover:text-magenta transition-colors">
+      <prismic-link
+        :field="slice.primary.buttonLink"
+        class="border-b border-current hover:text-magenta transition-colors"
+      >
         {{ $prismic.asText(slice.primary.buttonText) }}
       </prismic-link>
     </div>
@@ -39,9 +42,25 @@ export default {
   },
 
   mounted() {
+    this.linkEvents();
+    
     setTimeout(() => {
         this.loaded = true
     }, 250);
+  },
+
+  methods: {
+    linkEvents() {
+      window.addEventListener("scroll", () => {
+        const target = document.querySelector(".hero__cta");
+        if (target) {
+          let height = window.innerHeight
+          const scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop
+          height = height / 2
+          target.style.opacity = (height - scrollTop) / height
+        }
+      })
+    },
   }
 }
 </script>
@@ -52,12 +71,7 @@ export default {
 }
 
 .hero__heading,
-.hero__link {
+.hero__cta {
   transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 650ms
-}
-
-.hero__link {
-  /* transition-delay: 500ms; */
-  transition-duration: 1000ms;
 }
 </style>

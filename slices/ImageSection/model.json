@@ -18,6 +18,18 @@
             "thumbnails": []
           },
           "type": "Image"
+        },
+        "width": {
+          "config": {
+            "label": "Width",
+            "placeholder": "",
+            "options": [
+              "container",
+              "full_width"
+            ],
+            "default_value": "container"
+          },
+          "type": "Select"
         }
       },
       "items": {}

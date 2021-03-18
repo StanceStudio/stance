@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    /* scroll-behavior: smooth; */
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -31,7 +35,7 @@ em {
     ul,
     ol,
     p {
-        @apply text-sm mb-8;
+        @apply mb-8;
 
         @screen lg {
             @apply text-xl leading-relaxed;
@@ -39,7 +43,7 @@ em {
     }
 
     h4 {
-        @apply uppercase text-sm font-bold tracking-wide mb-8;
+        @apply uppercase font-bold tracking-wide mb-8;
 
         @screen lg {
             @apply text-lg;
@@ -70,7 +74,7 @@ em {
     ul,
     ol,
     p {
-        @apply text-sm mb-8;
+        @apply mb-8;
 
         @screen lg {
             @apply text-2xl mb-8;

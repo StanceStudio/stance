@@ -29,7 +29,8 @@ export default function (type, element, content, children) {
   // If the image is also a link to a Prismic Document, it will return a <router-link> component
   // Present by default, it is recommended to keep this
   if (type === Elements.image) {
-    let result = `<img src="${element.url}" alt="${
+    var id = element.alt.replace(/\W+/g, "-").toLowerCase();
+    let result = `<img id="${id}" src="${element.url}" alt="${
       element.alt || ""
     }" copyright="${element.copyright || ""}">`;
 

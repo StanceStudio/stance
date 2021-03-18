@@ -1,5 +1,5 @@
 <template>
-  <section :id="_uid" class="section py-16 lg:py-20 px-8 bg-magenta-light">
+  <section :id="_uid" class="section py-16 lg:py-40 px-8 bg-magenta-light">
     <div class="lg:w-9/12 mx-auto">
       <header v-if="$prismic.asText(slice.primary.heading) !== ''" class="flex justify-center mb-14 lg:mb-24 lg:mt-2">
         <prismic-rich-text :field="slice.primary.heading" class="font-serif text-center text-3xl  lg:text-6xl lg:leading-tight lg:w-2/3" />

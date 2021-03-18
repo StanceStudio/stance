@@ -1,20 +1,23 @@
 <template>
   <section
-    class="section bg-cover bg-center bg-no-repeat flex flex-col justify-center relative"
+    class="hero section bg-cover bg-center bg-no-repeat flex flex-col justify-center relative"
     :style="{backgroundImage: `url(${slice.primary.backgroundImage.url})`}"
   >
     <div class="lg:w-1/2 mx-auto px-8">
       <prismic-rich-text
         :field="slice.primary.subheading"
-        class="uppercase text-md text-center lg:text-lg mb-8 font-bold tracking-wide"
+        class="hero__subheading opacity-0 transform translate-y-3 uppercase text-md text-center lg:text-lg mb-8 font-bold tracking-wide"
+        :class="{'transform-none opacity-100': loaded}"
       />
       <prismic-rich-text
         :field="slice.primary.heading"
-        class="transition-transform delay-500 mb-8 text-center text-4xl lg:text-7xl font-serif lg:leading-snug"
+        class="hero__heading opacity-0 transform translate-y-3 mb-8 text-center text-4xl lg:text-7xl font-serif lg:leading-snug"
+        :class="{'transform-none opacity-100': loaded}"
       />
       <prismic-rich-text
         :field="slice.primary.text"
-        class="text-md text-center lg:text-lg font-medium lg:px-10"
+        class="hero__text opacity-0 text-md transform translate-y-3 text-center lg:text-lg font-medium lg:px-10"
+        :class="{'transform-none opacity-100': loaded}"
       />
     </div>
   </section>
@@ -31,11 +34,42 @@ export default {
       },
     },
   },
+
+  data() {
+    return {
+      loaded: false
+    }
+  },
+
+  mounted() {    
+    setTimeout(() => {
+        this.loaded = true
+    }, 250);
+  },
 }
 </script>
 
 <style scoped>
-.section {
+.hero {
   min-height: 100vh;
+}
+
+.hero__subheading,
+.hero__heading,
+.hero__text {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 650ms
+}
+
+.hero__heading {
+  transition-delay: 250ms;
+}
+
+.hero__text {
+  transition-delay: 500ms;
+}
+
+.hero__text {
+  transition-duration: 1000ms;
+  /* transition-delay: 500ms; */
 }
 </style>

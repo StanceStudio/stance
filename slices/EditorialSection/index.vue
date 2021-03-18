@@ -1,6 +1,6 @@
 <template>
   <section
-    class="section py-20 lg:py-20 bg-cover bg-center bg-no-repeat"
+    class="section py-20 lg:py-40 bg-cover bg-center bg-no-repeat"
     :style="sectionStyles"
   >
     <div class="lg:w-10/12 mx-auto px-8">
@@ -14,10 +14,10 @@
           <div class="lg:w-1/2 lg:px-12" :class="!slice.primary.image.url ? 'pb-0': 'pb-10'">
             <prismic-image v-if="slice.primary.image.url" :field="slice.primary.image"/>
           </div>
-          <div class="lg:w-1/2 lg:px-12">
+          <div class="lg:w-1/2 lg:px-12 max-w-prose">
             <prismic-rich-text
                 v-if="$prismic.asText(slice.primary.leadText) !==''"
-                :field="slice.primary.leadText" class="lg:text-3xl font-serif mb-8"
+                :field="slice.primary.leadText" class="text-xl lg:text-3xl font-serif mb-8"
               />
               <prismic-rich-text
                 :field="slice.primary.text"
@@ -27,7 +27,7 @@
                 v-if="$prismic.asText(slice.primary.altText) !==''"
                 :field="slice.primary.altText" class="lg:text-3xl font-serif mb-8"
               />
-              <div class="my-4 text-sm lg:text-xl" v-if="$prismic.asText(slice.primary.ctaText) !==''">
+              <div class="my-4 lg:text-xl" v-if="$prismic.asText(slice.primary.ctaText) !==''">
                 <prismic-link 
                   :field="slice.primary.ctaLink"
                   class="border-b border-current pb-1 hover:text-magenta transition-colors font-bold"
@@ -58,7 +58,7 @@ export default {
       if (!this.slice.primary.backgroundImage.url) {
         return
       }
-      
+
       return {
         backgroundImage: `url(${this.slice.primary.backgroundImage.url})`
       }

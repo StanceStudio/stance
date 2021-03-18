@@ -10,15 +10,10 @@
             <prismic-rich-text
                 v-if="$prismic.asText(post.data.excerpt)"
                 :field="post.data.excerpt"
-                class="text-sm lg:text-2xl font-medium lg:leading-tight"
+                class="lg:text-2xl font-medium lg:leading-tight"
             />
-            <nuxt-link :to="link" class="border-b border-current pb-1 hover:text-magenta text-sm lg:text-xl font-bold mt-8 inline-block transition-colors">
-                <span v-if="post.type === 'case_study'">
-                    Read Case Study
-                </span>
-                <span v-else>
-                    Read Update
-                </span>
+            <nuxt-link :to="link" class="border-b border-current pb-1 hover:text-magenta lg:text-xl font-bold mt-8 inline-block transition-colors">
+                {{ post.type === 'case_study'? 'Read Case Study' : 'Read Update' }}
             </nuxt-link>
         </div>
     </div>
@@ -36,7 +31,7 @@ export default {
   },
   name: 'post-widget',
   created () {
-      console.log(this.post);
+    console.log(this.post);
     this.link = LinkResolver(this.post)
   },
 }
