@@ -25,8 +25,7 @@
             "label": "Heading",
             "placeholder": "",
             "allowTargetBlank": true,
-            "type": "StructuredText",
-            "single": "hyperlink"
+            "multi": "hyperlink"
           },
           "type": "StructuredText"
         },

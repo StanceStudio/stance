@@ -9,7 +9,7 @@
     />
 
     <div class="absolute bottom-0 left-0 w-full text-center my-12 text-2xl font-medium hidden lg:block">
-      <prismic-link :field="slice.primary.buttonLink">
+      <prismic-link :field="slice.primary.buttonLink" class="border-b border-current hover:text-magenta transition-colors">
         {{ $prismic.asText(slice.primary.buttonText) }}
       </prismic-link>
     </div>
