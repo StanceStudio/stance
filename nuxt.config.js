@@ -15,12 +15,12 @@ export default {
     }, {
       hid: "description",
       name: "description",
-      content: ""
+      content: "We design purpose-led products, services and cultures that will drive your transformation."
     }],
     link: [{
       rel: "icon",
       type: "image/x-icon",
-      href: "/favicon.ico"
+      href: "/favicon.png"
     }]
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
