@@ -7,35 +7,68 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: "Stance",
-    meta: [{
-      charset: "utf-8"
-    }, {
-      name: "viewport",
-      content: "width=device-width, initial-scale=1"
-    }, {
-      hid: "description",
-      name: "description",
-      content: "We design purpose-led products, services and cultures that will drive your transformation."
-    }],
-    link: [{
-      rel: "icon",
-      type: "image/x-icon",
-      href: "/favicon.png"
-    }]
-  },
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-    "@/assets/css/fonts.css",
-    "@/assets/css/tailwind.css"
-  ],
+    meta: [
+      {
+        charset: "utf-8",
+      },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1",
+      },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "We design purpose-led products, services and cultures that will drive your transformation.",
+      },
+      {
+        hid: "og:title",
+        name: "og:title",
+        content:
+          "Stance",
+      },
+      {
+        hid: "og:description",
+        name: "og:description",
+        content:
+          "We design purpose-led products, services and cultures that will drive your transformation.",
+      },
+      {
+        hid: "og:image",
+        name: "og:image",
+        content: "/SocialShare.png",
+      },
 
-  loading: { color: '#292929', throttle: 0 },
+      {
+        hid: "og:url",
+        name: "og:url",
+        content: "https://stance.design",
+      },
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+    ],
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.png",
+      },
+    ],
+  },
+
+  // Global CSS (https://go.nuxtjs.dev/config-css)
+  css: ["@/assets/css/fonts.css", "@/assets/css/tailwind.css"],
+
+  loading: { color: "#292929", throttle: 0 },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     {
       src: "~/plugins/prismicLinks",
-      ssr: false
+      ssr: false,
     },
   ],
 
@@ -46,41 +79,48 @@ export default {
   buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/svg", "@nuxtjs/google-fonts"],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [["@nuxtjs/prismic", {
-    endpoint: smConfig.apiEndpoint || "",
-    disableGenerator: false,
-    linkResolver: "@/plugins/link-resolver",
-    htmlSerializer: "@/plugins/html-serializer",
-    // apiOptions: {
-    //   routes: [{
-    //     type: "page",
-    //     path: "/:uid"
-    //   }]
-    // }
-  }], ["nuxt-sm"], ["vue-screen/nuxt"]],
+  modules: [
+    [
+      "@nuxtjs/prismic",
+      {
+        endpoint: smConfig.apiEndpoint || "",
+        disableGenerator: false,
+        linkResolver: "@/plugins/link-resolver",
+        htmlSerializer: "@/plugins/html-serializer",
+        // apiOptions: {
+        //   routes: [{
+        //     type: "page",
+        //     path: "/:uid"
+        //   }]
+        // }
+      },
+    ],
+    ["nuxt-sm"],
+    ["vue-screen/nuxt"],
+  ],
 
   generate: {
-    fallback: true
+    fallback: true,
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    transpile: ["vue-slicezone", "nuxt-sm"]
+    transpile: ["vue-slicezone", "nuxt-sm"],
   },
 
   storybook: {
-    stories: ["~/slices/**/*.stories.js"]
+    stories: ["~/slices/**/*.stories.js"],
   },
-  
+
   ignore: ["**/*.stories.js"],
 
   googleFonts: {
     families: {
       Manrope: [400, 500, 600, 700],
-    }
+    },
   },
 
   screen: {
-    extend: 'tailwind',
+    extend: "tailwind",
   },
 };
