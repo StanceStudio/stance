@@ -1,5 +1,5 @@
 {
-    "redirects": [
-      { "source": "/behaviour-sprint", "destination": "/" }
-    ]
-}  
+  "rewrites": [
+    { "source": "/behaviour-sprint", "destination": "/" }
+  ]
+}
