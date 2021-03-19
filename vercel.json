@@ -1,0 +1,5 @@
+{
+    "redirects": [
+      { "source": "/behaviour-sprint", "destination": "/" }
+    ]
+}  
