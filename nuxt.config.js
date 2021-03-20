@@ -24,8 +24,7 @@ export default {
       {
         hid: "og:title",
         name: "og:title",
-        content:
-          "Stance",
+        content: "Stance",
       },
       {
         hid: "og:description",
@@ -76,7 +75,12 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/svg", "@nuxtjs/google-fonts"],
+  buildModules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/svg",
+    "@nuxtjs/google-fonts",
+    "nuxt-lazysizes",
+  ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
@@ -122,5 +126,11 @@ export default {
 
   screen: {
     extend: "tailwind",
+  },
+
+  lazySizes: {
+    plugins: {
+      unveilhooks: true,
+    },
   },
 };

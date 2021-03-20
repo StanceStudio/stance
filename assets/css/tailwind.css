@@ -101,3 +101,14 @@ em {
         @apply border-b;
     }
 }
+
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+
+.lazyloaded {
+	opacity: 1;
+    /*  transition is applied to lazyloaded not lazyload */
+	transition: opacity 300ms;
+}

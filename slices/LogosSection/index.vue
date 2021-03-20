@@ -6,7 +6,13 @@
       </header>
       <div class="flex flex-wrap items-center justify-between">
         <div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="w-4/12 lg:w-3/12 px-4 lg:px-8 py-6 text-center">    
-          <prismic-image :field="item.logo" class="inline-block"/>
+          <!-- <prismic-image :field="item.logo" class="inline-block"/> -->
+          <img
+            v-if="item.logo.url"
+            :data-src="item.logo.url"
+            class="inline-block lazyload"
+            :alt="item.logo.alt"
+          />
         </div>
       </div>
     </div>

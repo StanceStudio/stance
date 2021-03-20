@@ -1,9 +1,19 @@
 <template>
   <section
     class="section"
-    :class="[slice.primary.width === 'full_width' ? 'w-full' : 'lg:w-11/12 mx-auto px-8 py-16 lg:py-20']">
-    <prismic-image :field="slice.primary.image" class="w-full"
-  />
+    :class="[
+      slice.primary.width === 'full_width'
+        ? 'w-full'
+        : 'lg:w-11/12 mx-auto px-8 py-16 lg:py-20',
+    ]"
+  >
+    <!-- <prismic-image :field="slice.primary.image" class="w-full" /> -->
+    <img
+      v-if="slice.primary.image.url"
+      :data-src="slice.primary.image.url"
+      class="inline-block lazyload"
+      :alt="slice.primary.image.alt"
+    />
   </section>
 </template>
 
@@ -14,9 +24,9 @@ export default {
       type: Object,
       required: true,
       default() {
-        return {}
+        return {};
       },
     },
   },
-}
+};
 </script>

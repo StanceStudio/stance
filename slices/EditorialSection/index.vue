@@ -12,7 +12,8 @@
       </header>
       <div class="lg:flex items-center lg:-mx-12">
           <div class="lg:w-1/2 lg:px-12" :class="!slice.primary.image.url ? 'pb-0': 'pb-10'">
-            <prismic-image v-if="slice.primary.image.url" :field="slice.primary.image"/>
+            <!-- <prismic-image v-if="slice.primary.image.url" :field="slice.primary.image"/> -->
+            <img v-if="slice.primary.image.url" :data-src="slice.primary.image.url"  class="lazyload" :alt="slice.primary.image.alt" />
           </div>
           <div class="lg:w-1/2 lg:px-12 max-w-prose">
             <prismic-rich-text
