@@ -16,6 +16,7 @@ export default {
   head() {
     return {
       title: "Stance",
+      titleTemplate: '%s  —  Stance',
     };
   },
   // Called before rendering the layout (even for error page)

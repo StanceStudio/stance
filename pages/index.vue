@@ -18,6 +18,12 @@ export default {
     FooterPrismic
   },
 
+  head() {
+    return {
+      titleTemplate: 'Stance',
+    };
+  },
+
   async asyncData({ $prismic, params, error, app }) {
       try {
         const result = (await $prismic.api.getByUID('page', 'home')).data

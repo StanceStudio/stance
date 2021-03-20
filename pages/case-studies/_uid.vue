@@ -22,6 +22,12 @@ export default {
     FooterPrismic,
   },
 
+  head() {
+    return {
+      title: this.$prismic.asText(this.title),
+    };
+  },
+
   async asyncData({ $prismic, params, error }) {
     try {
       const result = (await $prismic.api.getByUID("case_study", params.uid))
@@ -29,6 +35,7 @@ export default {
 
       return {
         // Page content
+        title: result.title,
         footer: {
           background_image: result.footer_background_image,
           heading: result.footer_heading,

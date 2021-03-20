@@ -29,6 +29,12 @@ export default {
     FooterPrismic
   },
 
+  head() {
+    return {
+      title: this.$prismic.asText(this.title),
+    };
+  },
+
   async asyncData({ $prismic, params, error, app }) {
       try {
         const page = (await $prismic.api.getByUID('page', 'updates')).data
@@ -42,6 +48,7 @@ export default {
         //console.log(posts);
 
         return {
+            title: page.title,
             // posts
             posts: posts.results,
             // Page content

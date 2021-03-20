@@ -16,6 +16,12 @@ export default {
   name: 'NotFound',
   components: {
     HeaderPrismic
+  },
+
+   head() {
+    return {
+      title: "404 Page not found"
+    };
   }
 }
 </script>
