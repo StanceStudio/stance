@@ -119,6 +119,7 @@ export default {
   ignore: ["**/*.stories.js"],
 
   googleFonts: {
+    display: "swap",
     families: {
       Manrope: [400, 500, 600, 700],
     },
