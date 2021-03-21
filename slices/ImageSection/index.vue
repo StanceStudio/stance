@@ -1,6 +1,6 @@
 <template>
   <section
-    class="section"
+    class="section text-center"
     :class="[
       slice.primary.width === 'full_width'
         ? 'w-full'
