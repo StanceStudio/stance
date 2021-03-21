@@ -14,7 +14,7 @@
       :class="{ 'opacity-100': loaded }"
     >
       <a
-        v-if="slice.primary.buttonLink.url.indexOf('#') !== -1"
+        v-if="slice.primary.buttonLink.url && slice.primary.buttonLink.url.indexOf('#') !== -1"
         href="#"
         role="button"
         @click.prevent="scrollToHash(slice.primary.buttonLink.url)"
