@@ -12,6 +12,7 @@
       v-if="slice.primary.image.url"
       :data-src="slice.primary.image.url"
       class="inline-block lazyload"
+      :class="{'w-full' : slice.primary.width === 'full_width'}"
       :alt="slice.primary.image.alt"
     />
   </section>

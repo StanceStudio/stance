@@ -3,7 +3,7 @@
     class="hero section bg-cover bg-center bg-no-repeat flex flex-col justify-center relative"
     :style="{backgroundImage: `url(${slice.primary.backgroundImage.url})`}"
   >
-    <div class="lg:w-1/2 mx-auto px-8">
+    <div class="lg:w-3/5 mx-auto px-8">
       <prismic-rich-text
         :field="slice.primary.subheading"
         class="hero__subheading opacity-0 transform translate-y-3 uppercase text-md text-center lg:text-lg mb-8 font-bold tracking-wide"
@@ -11,12 +11,12 @@
       />
       <prismic-rich-text
         :field="slice.primary.heading"
-        class="hero__heading opacity-0 transform translate-y-3 mb-8 text-center text-4xl lg:text-7xl font-serif lg:leading-snug"
+        class="hero__heading opacity-0 transform translate-y-3 mb-8 text-center text-4xl md:text-6xl xl:text-7xl font-serif lg:leading-tight"
         :class="{'transform-none opacity-100': loaded}"
       />
       <prismic-rich-text
         :field="slice.primary.text"
-        class="hero__text opacity-0 text-md transform translate-y-3 text-center lg:text-lg font-medium lg:px-10"
+        class="hero__text max-w-prose mx-auto opacity-0 text-md transform translate-y-3 text-center lg:text-lg font-medium lg:px-10 w-full md:w-4/6 lg:w-full"
         :class="{'transform-none opacity-100': loaded}"
       />
     </div>
@@ -70,6 +70,5 @@ export default {
 
 .hero__text {
   transition-duration: 1000ms;
-  /* transition-delay: 500ms; */
 }
 </style>

@@ -11,7 +11,7 @@
       >
         Designing a Sustainable Future Faster
       </div>
-      <div class="copy ml-auto mt-3 lg:mt-0 lg:ml-0 uppercase font-medium">
+      <div class="copy ml-auto mt-3 md:mt-0 md:ml-0 uppercase font-medium">
         © Stance {{ date }}
       </div>
     </div>
