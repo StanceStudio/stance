@@ -17,6 +17,7 @@
         v-if="slice.primary.buttonLink.url && slice.primary.buttonLink.url.indexOf('#') !== -1"
         href="#"
         role="button"
+        class="border-b border-current hover:text-magenta transition-colors"
         @click.prevent="scrollToHash(slice.primary.buttonLink.url)"
       >
         {{ $prismic.asText(slice.primary.buttonText) }}
