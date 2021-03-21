@@ -44,7 +44,7 @@ export default {
   },
   name: "post-widget",
   created() {
-    console.log(this.post);
+    //console.log(this.post);
     this.link = LinkResolver(this.post);
   },
 };

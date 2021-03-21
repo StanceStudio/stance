@@ -5,7 +5,7 @@
   >
     <prismic-rich-text
       :field="slice.primary.heading"
-      class="hero__heading transform opacity-0 translate-y-3 px-8 lg:w-2/3 mx-auto text-center text-4xl lg:text-7xl font-serif leading-tight lg:leading-tight"
+      class="hero__heading transform opacity-0 translate-y-3 px-8 lg:w-2/3 mx-auto text-center text-4xl md:text-6xl lg:text-7xl font-serif leading-tight lg:leading-tight"
       :class="{ 'transform-none opacity-100': loaded }"
     />
 
@@ -60,7 +60,6 @@ export default {
 
   methods: {
     scrollToHash(url) {
-      console.log(url.split("#")[1]);
       const hash = url.split("#")[1];
       if (hash) {
         const offsetTop = document.querySelector(`#${hash}`).offsetTop - 40;

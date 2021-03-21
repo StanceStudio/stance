@@ -28,7 +28,7 @@ export default {
       try {
         const result = (await $prismic.api.getByUID('page', 'home')).data
 
-        console.log('page',result);
+        //console.log('page',result);
 
         return {
             // Page content
