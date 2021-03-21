@@ -14,7 +14,10 @@
       :class="{ 'opacity-100': loaded }"
     >
       <a
-        v-if="slice.primary.buttonLink.url && slice.primary.buttonLink.url.indexOf('#') !== -1"
+        v-if="
+          slice.primary.buttonLink.url &&
+          slice.primary.buttonLink.url.indexOf('#') !== -1
+        "
         href="#"
         role="button"
         class="border-b border-current hover:text-magenta transition-colors"
@@ -63,12 +66,11 @@ export default {
     scrollToHash(url) {
       const hash = url.split("#")[1];
       if (hash) {
-        const offsetTop = document.querySelector(`#${hash}`).offsetTop - 40;
-
-        window.scroll({
-          top: offsetTop,
-          behavior: "smooth",
-        });
+        document
+          .querySelector(`#${hash}`)
+          .scrollIntoView({
+            behavior: "smooth",
+          });
       }
     },
 
@@ -85,7 +87,7 @@ export default {
                   document.body.parentNode ||
                   document.body
                 ).scrollTop;
-          height = height / 2;
+          height = height / 1;
           target.style.opacity = (height - scrollTop) / height;
         }
       });
