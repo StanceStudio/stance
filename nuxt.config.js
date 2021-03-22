@@ -83,6 +83,7 @@ export default {
     "@nuxtjs/svg",
     "@nuxtjs/google-fonts",
     "nuxt-lazysizes",
+    "@nuxtjs/google-analytics"
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -137,4 +138,9 @@ export default {
       unveilhooks: true,
     },
   },
+
+  googleAnalytics: {
+    id: 'UA-152783995-1'
+  }
 };
+
