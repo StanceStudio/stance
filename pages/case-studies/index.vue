@@ -36,10 +36,10 @@ export default {
         // Query to get posts content to preview
         const posts = await $prismic.api.query(
           $prismic.predicates.at("document.type", "case_study"),
-          { orderings : '[my.post.order_date desc]' }
+          { orderings : '[my.case_study.order_date desc]' }
         )
 
-        //console.log(posts);
+        console.log(posts);
 
         return {
             // posts
