@@ -6,8 +6,8 @@
             class="font-serif text-center text-3xl lg:text-6xl lg:leading-tight lg:w-2/3"
           />
       </header>
-      <div class="lg:flex lg:flex-wrap justify-around -mx-8">
-      <div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="text-left lg:w-2/6 px-8 lg:px-24 lg:mb-28">    
+      <div class="md:flex md:flex-wrap justify-around -mx-8">
+      <div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="text-left xl:w-2/6 px-8 lg:px-24 lg:mb-28">    
           <prismic-rich-text :field="item.text" class="lg:text-xl font-medium leading-relaxed" />
       </div>
     </div>

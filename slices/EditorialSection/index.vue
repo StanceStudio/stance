@@ -37,7 +37,7 @@
           <prismic-rich-text
             v-if="$prismic.asText(slice.primary.altText) !== ''"
             :field="slice.primary.altText"
-            class="lg:text-3xl font-serif mb-8"
+            class="text-xl lg:text-3xl font-serif mb-8"
           />
           <div
             class="my-4 lg:text-xl"
