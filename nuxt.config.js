@@ -26,48 +26,48 @@ export default {
       },
       {
         hid: "og:type",
-        name: "og:type",
+        property: "og:type",
         content: "website",
       },
       {
         hid: "og:title",
-        name: "og:title",
+        property: "og:title",
         content: "Stance",
       },
       {
         hid: "og:description",
-        name: "og:description",
+        property: "og:description",
         content:
           "We design purpose-led products, services and cultures that will drive your transformation.",
       },
       {
         hid: "og:image",
-        name: "og:image",
+        property: "og:image",
         content:  "https://stance.design/social-share.png",
       },
       {
         hid: "og:url",
-        name: "og:url",
+        property: "og:url",
         content: "https://stance.design",
       },
       {
         hid: "twitter:card",
-        name: "twitter:card",
+        property: "twitter:card",
         content: "summary_large_image",
       },
       {
         hid: "twitter:url",
-        name: "twitter:url",
+        property: "twitter:url",
         content: "https://stance.design",
       },
       {
         hid: "twitter:description",
-        name: "twitter:description",
+        property: "twitter:description",
         content: "We design purpose-led products, services and cultures that will drive your transformation.",
       },
       {
         hid: "twitter:image",
-        name: "twitter:image",
+        property: "twitter:image",
         content:  "https://stance.design/social-share.png",
       },
     ],

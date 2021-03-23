@@ -26,12 +26,12 @@ export default {
       meta: [
         {
           hid:"og:url",
-          name: "og:url",
+          property: "og:url",
           content: `https://stance.design${this.$route.path}`
         },
         {
           hid:"twitter:url",
-          name: "twitter:url",
+          property: "twitter:url",
           content: `https://stance.design${this.$route.path}`
         }
       ]
