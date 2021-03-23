@@ -16,13 +16,31 @@
       <div class="lg:flex items-center lg:-mx-12">
         <div
           class="lg:w-1/2 lg:px-12"
-          :class="!slice.primary.image.url ? 'pb-0' : 'pb-10'"
+          :class="
+            !slice.primary.image.url || !slice.primary.video.url
+              ? 'pb-0'
+              : 'pb-10'
+          "
         >
           <!-- <prismic-image v-if="slice.primary.image.url" :field="slice.primary.image"/> -->
-          <img v-if="slice.primary.image.url"
-          :data-src="slice.primary.image.url" class="lazyload"
-          :alt="slice.primary.image.alt"
-          :id="slice.primary.image.alt | kebabCase" />
+          <video
+            v-if="slice.primary.media === 'video' && slice.primary.video.url"
+            :src="slice.primary.video.url"
+            :data-poster="slice.primary.image.url"
+            preload="none"
+            class="lazyload"
+            muted
+            data-autoplay=""
+            playsinline
+            loop
+          ></video>
+          <img
+            v-else-if="slice.primary.image.url"
+            :data-src="slice.primary.image.url"
+            class="lazyload"
+            :alt="slice.primary.image.alt"
+            :id="slice.primary.image.alt | kebabCase"
+          />
         </div>
         <div class="lg:w-1/2 lg:px-12 max-w-prose">
           <prismic-rich-text
@@ -67,13 +85,13 @@ export default {
       },
     },
   },
-  
+
   filters: {
     kebabCase: function (value) {
-      if (!value) return ''
-      value = value.toString()
-      return value.replace(/\W+/g, "-").toLowerCase()
-    }
+      if (!value) return "";
+      value = value.toString();
+      return value.replace(/\W+/g, "-").toLowerCase();
+    },
   },
 
   computed: {
@@ -89,3 +107,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+video {
+   object-fit: inherit;
+}
+</style>

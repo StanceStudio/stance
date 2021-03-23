@@ -13,15 +13,16 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+        "url": "https://images.prismic.io/stance/c3288cc0-ac03-4093-9c0b-cc3025179b62_Module+Background_Yellow+Blur+on+Green-09.png?w=900&h=500&fit=crop"
       },
       "heading": [
         {
           "type": "heading2",
-          "text": "Envisioneer synergistic methodologies",
+          "text": "Target dynamic methodologies",
           "spans": []
         }
       ],
+      "media": "image",
       "image": {
         "dimensions": {
           "width": 900,
@@ -29,33 +30,37 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+        "url": "https://images.prismic.io/stance/e4962ae2-9a48-4ca7-bd94-e84b0481fd2b_fade.png?w=900&h=500&fit=crop"
+      },
+      "video": {
+        "link_type": "Web",
+        "url": "https://images.prismic.io/stance/e4962ae2-9a48-4ca7-bd94-e84b0481fd2b_fade.png"
       },
       "leadText": [
         {
           "type": "paragraph",
-          "text": "Cillum dolor ipsum laborum excepteur. Quis duis exercitation nisi quis consequat consequat eu aliquip nisi consequat minim dolor ullamco.",
+          "text": "Non duis adipisicing deserunt veniam eiusmod duis.",
           "spans": []
         }
       ],
       "text": [
         {
           "type": "paragraph",
-          "text": "Aliqua Lorem adipisicing tempor mollit labore veniam veniam occaecat minim quis.",
+          "text": "Reprehenderit et exercitation ad voluptate incididunt ut. Esse aliqua mollit reprehenderit aute culpa eiusmod amet. Nisi excepteur ex fugiat pariatur excepteur ad ex aute ea velit do.",
           "spans": []
         }
       ],
       "altText": [
         {
           "type": "paragraph",
-          "text": "Cillum id excepteur laboris do excepteur pariatur voluptate eiusmod cillum ea.",
+          "text": "Commodo magna nisi ipsum anim duis anim.",
           "spans": []
         }
       ],
       "ctaText": [
         {
           "type": "paragraph",
-          "text": "Ullamco officia occaecat cupidatat proident. Cillum cupidatat culpa Lorem non.",
+          "text": "Consectetur exercitation velit duis minim ipsum est ullamco nisi exercitation. Est veniam occaecat velit exercitation sint ut aliqua non velit ad excepteur mollit occaecat aliqua. Culpa aliqua dolore labore dolore duis sit ut nisi et ad proident aliqua nostrud enim fugiat.",
           "spans": []
         }
       ],

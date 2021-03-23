@@ -50,6 +50,18 @@
           "patternType": "PARAGRAPH",
           "blocks": 1
         }
+      },
+      "video": {
+        "content": "https://images.prismic.io/stance/e4962ae2-9a48-4ca7-bd94-e84b0481fd2b_fade.png"
+      },
+      "media": {
+        "content": "image"
+      },
+      "backgroundImage": {
+        "content": "https://images.prismic.io/stance/c3288cc0-ac03-4093-9c0b-cc3025179b62_Module+Background_Yellow+Blur+on+Green-09.png"
+      },
+      "image": {
+        "content": "https://images.prismic.io/stance/e4962ae2-9a48-4ca7-bd94-e84b0481fd2b_fade.png"
       }
     }
   },

@@ -28,6 +28,18 @@
           },
           "type": "StructuredText"
         },
+        "media": {
+          "config": {
+            "label": "Media",
+            "placeholder": "Choose media",
+            "default_value": "image",
+            "options": [
+              "image",
+              "video"
+            ]
+          },
+          "type": "Select"
+        },
         "image": {
           "config": {
             "label": "Image",
@@ -35,6 +47,14 @@
             "thumbnails": []
           },
           "type": "Image"
+        },
+        "video": {
+          "config": {
+            "label": "Video",
+            "placeholder": "",
+            "allowTargetBlank": true
+          },
+          "type": "Link"
         },
         "leadText": {
           "config": {
