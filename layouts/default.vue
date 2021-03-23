@@ -17,6 +17,19 @@ export default {
     return {
       title: "Stance",
       titleTemplate: '%s  —  Stance',
+      link: [
+        {
+          rel: 'canonical',
+          href: `https://stance.design${this.$route.path}`
+        }
+      ],
+      meta: [
+        {
+          hid:"og:url",
+          name: "og:url",
+          content: `https://stance.design${this.$route.path}`
+        }
+      ]
     };
   },
   // Called before rendering the layout (even for error page)

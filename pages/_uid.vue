@@ -26,15 +26,17 @@ export default {
 
   async asyncData({ $prismic, params, error }) {
     try {
-      const result = (await $prismic.api.getByUID("page", params.uid)).data;
+      const result = (await $prismic.api.getByUID("page", params.uid));
+
+      console.log(result);
 
       return {
         // Page content
-        title: result.title,
+        title: result.data.title,
         footer: {
-          background_image: result.footer_background_image,
-          heading: result.footer_heading,
-          text: result.footer_text,
+          background_image: result.data.footer_background_image,
+          heading: result.data.footer_heading,
+          text: result.data.footer_text,
         },
       };
     } catch (e) {
