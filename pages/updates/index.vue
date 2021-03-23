@@ -44,6 +44,11 @@ export default {
           content: this.title,
         },
         {
+          hid: "og:image",
+          name: "og:image",
+          content: this.image,
+        },
+        {
           hid: "description",
           property: "description",
           content: this.description,
@@ -52,6 +57,16 @@ export default {
           hid: "twitter:title",
           property: "twitter:title",
           content: this.title,
+        },
+        {
+          hid: "twitter:description",
+          property: "twitter:description",
+          content: this.description,
+        },
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content: this.image,
         },
       ],
     };
@@ -71,6 +86,8 @@ export default {
 
       return {
         title: page.meta_title || $prismic.asText(page.title),
+        description: page.meta_description,
+        image: page.meta_image.url,
         // posts
         posts: posts.results,
         // Page content

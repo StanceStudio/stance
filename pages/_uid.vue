@@ -30,6 +30,11 @@ export default {
           content: this.title,
         },
         {
+          hid: "og:image",
+          name: "og:image",
+          content: this.image,
+        },
+        {
           hid: "description",
           property: "description",
           content: this.description,
@@ -44,6 +49,11 @@ export default {
           property: "twitter:description",
           content: this.description,
         },
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content: this.image,
+        },
       ],
     };
   },
@@ -57,6 +67,8 @@ export default {
       return {
         // Page content
         title: result.meta_title || $prismic.asText(result.title),
+        description: result.meta_description,
+        image: result.meta_image.url,
         footer: {
           background_image: result.footer_background_image,
           heading: result.footer_heading,
