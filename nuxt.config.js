@@ -38,7 +38,7 @@ export default {
       {
         hid: "og:image",
         name: "og:image",
-        content:  "https://stance.design/socialshare.png",
+        content:  "https://stance.design/social-share.png",
       },
       {
         hid: "og:url",
