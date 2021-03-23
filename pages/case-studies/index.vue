@@ -33,6 +33,13 @@ export default {
     FooterPrismic,
   },
 
+  head() {
+    return {
+      title: this.title,
+      meta: [{ hid: "og:title", property: "og:title", content: this.title }],
+    };
+  },
+
   async asyncData({ $prismic, params, error, app }) {
     try {
       const page = (await $prismic.api.getByUID("page", "case-studies")).data;
@@ -43,9 +50,10 @@ export default {
         { orderings: "[my.case_study.order_date desc]" }
       );
 
-      console.log(page);
+      //console.log(page);
 
       return {
+        title: $prismic.asText(page.title),
         // posts
         posts: posts.results,
         // Page content

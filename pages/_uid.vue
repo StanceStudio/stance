@@ -20,23 +20,24 @@ export default {
 
   head() {
     return {
-      title: this.$prismic.asText(this.title),
+      title: this.title,
+      meta: [{ hid: "og:title", property: "og:title", content: this.title }],
     };
   },
 
   async asyncData({ $prismic, params, error }) {
     try {
-      const result = (await $prismic.api.getByUID("page", params.uid));
+      const result = (await $prismic.api.getByUID("page", params.uid)).data;
 
-      console.log(result);
+      //console.log(result);
 
       return {
         // Page content
-        title: result.data.title,
+        title: $prismic.asText(result.title),
         footer: {
-          background_image: result.data.footer_background_image,
-          heading: result.data.footer_heading,
-          text: result.data.footer_text,
+          background_image: result.footer_background_image,
+          heading: result.footer_heading,
+          text: result.footer_text,
         },
       };
     } catch (e) {

@@ -20,7 +20,8 @@ export default {
 
   head() {
     return {
-      title: this.$prismic.asText(this.title),
+      title: this.title,
+      meta: [{ hid: "og:title", property: "og:title", content: this.title }],
     };
   },
 
@@ -30,7 +31,7 @@ export default {
 
         return {
             // Page content
-            title: result.title,
+            title: $prismic.asText(result.title),
             footer: {
               background_image: result.footer_background_image,
               heading: result.footer_heading,

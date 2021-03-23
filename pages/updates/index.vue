@@ -36,6 +36,7 @@ export default {
   head() {
     return {
       title: this.$prismic.asText(this.title),
+       meta: [{ hid: "og:title", property: "og:title", content: this.title }],
     };
   },
 
@@ -52,7 +53,7 @@ export default {
       //console.log(posts);
 
       return {
-        title: page.title,
+        title: $prismic.asText(page.title),
         // posts
         posts: posts.results,
         // Page content
