@@ -15,32 +15,49 @@ export default {
   components: {
     SliceZone,
     PageFooter,
-    FooterPrismic
+    FooterPrismic,
   },
 
   head() {
     return {
       title: this.title,
-      meta: [{ hid: "og:title", property: "og:title", content: this.title }],
+      meta: [
+        { hid: "og:title", property: "og:title", content: this.title },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.title,
+        },
+        {
+          hid: "description",
+          property: "description",
+          content: this.description,
+        },
+        {
+          hid: "twitter:title",
+          property: "twitter:title",
+          content: this.title,
+        },
+      ],
     };
   },
 
   async asyncData({ $prismic, params, error }) {
-      try {
-        const result = (await $prismic.api.getByUID('update', params.uid)).data
+    try {
+      const result = (await $prismic.api.getByUID("update", params.uid)).data;
 
-        return {
-            // Page content
-            title: $prismic.asText(result.title),
-            footer: {
-              background_image: result.footer_background_image,
-              heading: result.footer_heading,
-              text: result.footer_text,
-            }
-        };
-      } catch (e) {
-        error({ statusCode: 404, message: "Page not found" });
-      }
+      return {
+        // Page content
+        title: result.meta_title || $prismic.asText(result.title),
+        footer: {
+          background_image: result.footer_background_image,
+          heading: result.footer_heading,
+          text: result.footer_text,
+        },
+      };
+    } catch (e) {
+      error({ statusCode: 404, message: "Page not found" });
+    }
   },
 };
 </script>

@@ -25,6 +25,11 @@ export default {
           "We design purpose-led products, services and cultures that will drive your transformation.",
       },
       {
+        hid: "og:type",
+        name: "og:type",
+        content: "website",
+      },
+      {
         hid: "og:title",
         name: "og:title",
         content: "Stance",
@@ -49,6 +54,21 @@ export default {
         hid: "twitter:card",
         name: "twitter:card",
         content: "summary_large_image",
+      },
+      {
+        hid: "twitter:url",
+        name: "twitter:url",
+        content: "https://stance.design",
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content: "We design purpose-led products, services and cultures that will drive your transformation.",
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content:  "https://stance.design/social-share.png",
       },
     ],
     link: [

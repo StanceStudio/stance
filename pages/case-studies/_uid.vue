@@ -25,7 +25,29 @@ export default {
   head() {
     return {
       title: this.title,
-       meta: [{ hid: "og:title", property: "og:title", content: this.title }],
+      meta: [
+        { hid: "og:title", property: "og:title", content: this.title },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.title,
+        },
+        {
+          hid: "description",
+          property: "description",
+          content: this.description,
+        },
+        {
+          hid: "twitter:title",
+          property: "twitter:title",
+          content: this.title,
+        },
+        {
+          hid: "twitter:description",
+          property: "twitter:description",
+          content: this.description,
+        },
+      ],
     };
   },
 
@@ -36,7 +58,8 @@ export default {
 
       return {
         // Page content
-        title: $prismic.asText(result.title),
+        title: result.meta_title || $prismic.asText(result.title),
+        description: result.meta_description,
         footer: {
           background_image: result.footer_background_image,
           heading: result.footer_heading,

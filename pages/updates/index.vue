@@ -35,8 +35,25 @@ export default {
 
   head() {
     return {
-      title: this.$prismic.asText(this.title),
-       meta: [{ hid: "og:title", property: "og:title", content: this.title }],
+      title: this.title,
+      meta: [
+        { hid: "og:title", property: "og:title", content: this.title },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.title,
+        },
+        {
+          hid: "description",
+          property: "description",
+          content: this.description,
+        },
+        {
+          hid: "twitter:title",
+          property: "twitter:title",
+          content: this.title,
+        },
+      ],
     };
   },
 
@@ -53,7 +70,7 @@ export default {
       //console.log(posts);
 
       return {
-        title: $prismic.asText(page.title),
+        title: page.meta_title || $prismic.asText(page.title),
         // posts
         posts: posts.results,
         // Page content

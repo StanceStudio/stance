@@ -28,6 +28,11 @@ export default {
           hid:"og:url",
           name: "og:url",
           content: `https://stance.design${this.$route.path}`
+        },
+        {
+          hid:"twitter:url",
+          name: "twitter:url",
+          content: `https://stance.design${this.$route.path}`
         }
       ]
     };
