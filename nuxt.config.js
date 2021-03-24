@@ -91,6 +91,10 @@ export default {
       src: "~/plugins/prismicLinks",
       ssr: false,
     },
+    {
+      src: '~/plugins/backgroundVideo',
+      ssr: false
+    }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

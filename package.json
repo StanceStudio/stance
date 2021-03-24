@@ -23,6 +23,7 @@
     "core-js": "^3.8.3",
     "nuxt": "^2.15.3",
     "nuxt-sm": "^0.0.6",
+    "vue-responsive-video-background-player": "1.2.2",
     "vue-screen": "^1.5.3",
     "vue-slicezone": "^0.0.29"
   },
