@@ -22,7 +22,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "We design purpose-led products, services and cultures that will drive your transformation.",
+          " Stance design products, services, brands and ways of working that create lasting value for business and society.",
       },
       {
         hid: "og:type",
@@ -38,7 +38,7 @@ export default {
         hid: "og:description",
         property: "og:description",
         content:
-          "We design purpose-led products, services and cultures that will drive your transformation.",
+          " Stance design products, services, brands and ways of working that create lasting value for business and society.",
       },
       {
         hid: "og:image",
@@ -63,7 +63,7 @@ export default {
       {
         hid: "twitter:description",
         property: "twitter:description",
-        content: "We design purpose-led products, services and cultures that will drive your transformation.",
+        content: " Stance design products, services, brands and ways of working that create lasting value for business and society.",
       },
       {
         hid: "twitter:image",
