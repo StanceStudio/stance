@@ -1,6 +1,6 @@
 <template>
   <header
-    class="site-header fixed w-full top-0 left-0 z-10"
+    class="site-header fixed w-full top-0 left-0 z-20"
     :class="{
       'scroll-up': scollingUp,
       'scroll-down': scrollingDown,
