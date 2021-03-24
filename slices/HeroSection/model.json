@@ -12,14 +12,6 @@
       "description": "HeroSection",
       "items": {},
       "primary": {
-        "backgroundImage": {
-          "config": {
-            "label": "Background Image",
-            "constraint": {},
-            "thumbnails": []
-          },
-          "type": "Image"
-        },
         "heading": {
           "config": {
             "label": "Heading",
@@ -44,6 +36,34 @@
             "label": "Button Link",
             "placeholder": "",
             "type": "Link",
+            "allowTargetBlank": true
+          },
+          "type": "Link"
+        },
+        "media": {
+          "config": {
+            "label": "Media",
+            "placeholder": "Choose background media",
+            "options": [
+              "image",
+              "video"
+            ],
+            "default_value": "image"
+          },
+          "type": "Select"
+        },
+        "backgroundImage": {
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "backgroundVideo": {
+          "config": {
+            "label": "Background Video",
+            "placeholder": "",
             "allowTargetBlank": true
           },
           "type": "Link"

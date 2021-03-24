@@ -16,6 +16,9 @@
       },
       "backgroundImage": {
         "content": "https://images.prismic.io/stance/e4962ae2-9a48-4ca7-bd94-e84b0481fd2b_fade.png"
+      },
+      "backgroundVideo": {
+        "content": "https://images.prismic.io/stance/e4962ae2-9a48-4ca7-bd94-e84b0481fd2b_fade.png"
       }
     }
   },

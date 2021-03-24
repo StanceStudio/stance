@@ -3,14 +3,17 @@
     class="section hero bg-cover bg-center bg-no-repeat flex flex-col justify-center relative"
     :style="{ backgroundImage: `url(${slice.primary.backgroundImage.url})` }"
   >
+    <!-- Heading -->
     <prismic-rich-text
       :field="slice.primary.heading"
-      class="hero__heading transform opacity-0 translate-y-3 px-8 lg:w-2/3 mx-auto text-center text-4xl md:text-6xl lg:text-7xl font-serif leading-tight lg:leading-tight"
+      class="hero__heading transform opacity-0 translate-y-3 px-8 lg:w-2/3 mx-auto text-center text-4xl md:text-6xl lg:text-7xl font-serif leading-tight lg:leading-tight z-10"
       :class="{ 'transform-none opacity-100': loaded }"
     />
+    <!-- Heading -->
 
+    <!-- CTA -->
     <div
-      class="hero__cta opacity-0 absolute bottom-0 left-0 w-full text-center my-12 lg:text-2xl font-medium"
+      class="hero__cta opacity-0 absolute bottom-0 left-0 w-full text-center my-12 lg:text-2xl font-medium z-10"
       :class="{ 'opacity-100': loaded }"
     >
       <a
@@ -33,6 +36,25 @@
         {{ $prismic.asText(slice.primary.buttonText) }}
       </prismic-link>
     </div>
+    <!-- CTA -->
+
+    <!-- Background video -->
+    <client-only>
+      <video-background
+        v-if="slice.primary.media === 'video' && slice.primary.backgroundVideo.url"
+        :src="slice.primary.backgroundVideo.url"
+        :sources="[
+          {
+            src: slice.primary.backgroundVideo.url,
+            res: 991,
+            autoplay: true,
+          },
+        ]"
+        class="h-full absolute inset-0"
+      >
+      </video-background>
+    </client-only>
+    <!-- Background video -->
   </section>
 </template>
 
@@ -59,18 +81,16 @@ export default {
 
     setTimeout(() => {
       this.loaded = true;
-    }, 250);
+    }, 200);
   },
 
   methods: {
     scrollToHash(url) {
       const hash = url.split("#")[1];
       if (hash) {
-        document
-          .querySelector(`#${hash}`)
-          .scrollIntoView({
-            behavior: "smooth",
-          });
+        document.querySelector(`#${hash}`).scrollIntoView({
+          behavior: "smooth",
+        });
       }
     },
 
@@ -97,6 +117,10 @@ export default {
 </script>
 
 <style scoped>
+.vue-responsive-videobg {
+  position: absolute !important;
+}
+
 .hero {
   min-height: 100vh;
 }
