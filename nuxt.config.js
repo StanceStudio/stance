@@ -22,7 +22,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          " Stance design products, services, brands and ways of working that create lasting value for business and society.",
+          "Stance design products, services, brands and ways of working that create lasting value for business and society.",
       },
       {
         hid: "og:type",
@@ -38,7 +38,7 @@ export default {
         hid: "og:description",
         property: "og:description",
         content:
-          " Stance design products, services, brands and ways of working that create lasting value for business and society.",
+          "Stance design products, services, brands and ways of working that create lasting value for business and society.",
       },
       {
         hid: "og:image",
