@@ -7,7 +7,7 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     htmlAttrs: {
-      lang: 'en'
+      lang: "en",
     },
     title: "Stance",
     meta: [
@@ -43,7 +43,7 @@ export default {
       {
         hid: "og:image",
         property: "og:image",
-        content:  "https://stance.design/social-share.png",
+        content: "https://stance.design/social-share.png",
       },
       {
         hid: "og:url",
@@ -63,12 +63,13 @@ export default {
       {
         hid: "twitter:description",
         property: "twitter:description",
-        content: " Stance design products, services, brands and ways of working that create lasting value for business and society.",
+        content:
+          " Stance design products, services, brands and ways of working that create lasting value for business and society.",
       },
       {
         hid: "twitter:image",
         property: "twitter:image",
-        content:  "https://stance.design/social-share.png",
+        content: "https://stance.design/social-share.png",
       },
     ],
     link: [
@@ -92,9 +93,9 @@ export default {
       ssr: false,
     },
     {
-      src: '~/plugins/backgroundVideo',
-      ssr: false
-    }
+      src: "~/plugins/backgroundVideo",
+      ssr: false,
+    },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -106,7 +107,8 @@ export default {
     "@nuxtjs/svg",
     "@nuxtjs/google-fonts",
     "nuxt-lazysizes",
-    "@nuxtjs/google-analytics"
+    "@nuxtjs/google-analytics",
+    "@/modules/sitemapRouteGenerator",
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -128,6 +130,7 @@ export default {
     ],
     ["nuxt-sm"],
     ["vue-screen/nuxt"],
+    ["@nuxtjs/sitemap"],
   ],
 
   generate: {
@@ -163,7 +166,10 @@ export default {
   },
 
   googleAnalytics: {
-    id: 'UA-152783995-1'
+    id: "UA-152783995-1",
+  },
+
+  sitemap: {
+    hostname: "https://stance.design"
   }
 };
-
