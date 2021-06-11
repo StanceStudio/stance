@@ -2,7 +2,7 @@
   <header
     class="site-header fixed w-full top-0 left-0 z-20"
     :class="{
-      'scroll-up': scollingUp,
+      'scroll-up': scrollingUp,
       'scroll-down': scrollingDown,
       'menu-active': openNav,
     }"
@@ -56,14 +56,14 @@ export default {
   data() {
     return {
       openNav: false,
-      scollingUp: false,
+      scrollingUp: false,
       scrollingDown: false,
     };
   },
 
   watch: {
     $route() {
-      this.scollingUp = false;
+      this.scrollingUp = false;
       this.scrollingDown = false;
     },
   },
@@ -81,11 +81,11 @@ export default {
       if (currentScroll > lastScroll && !this.scrollingDown) {
         // down
         this.scrollingDown = true;
-        this.scollingUp = false;
+        this.scrollingUp = false;
       } else if (currentScroll < lastScroll && this.scrollingDown) {
         // up
         this.scrollingDown = false;
-        this.scollingUp = true;
+        this.scrollingUp = true;
       }
       lastScroll = currentScroll;
     });
@@ -194,7 +194,7 @@ button {
 }
 
 button span {
-  @apply bg-black block w-full block absolute opacity-100 top-1/2;
+  @apply bg-black block w-full absolute opacity-100 top-1/2;
 
   height: 2px;
 
