@@ -11,7 +11,7 @@
         <prismic-rich-text
           :field="slice.primary.subheading"
           v-if="$prismic.asText(slice.primary.subheading) !== ''"
-          class="uppercase lg:text-xl mb-12 lg:mb-24 font-bold tracking-wide text-center"
+          class="uppercase lg:text-xl mb-12 lg:mb-32 font-bold tracking-wide text-center"
         />
         <prismic-rich-text
           :field="slice.primary.heading"

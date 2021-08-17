@@ -25,8 +25,8 @@
         <div
           v-for="(item, i) in slice.items"
           :key="`slice-item-${i}`"
-          class="grid-item lg:w-1/2 px-8 lg:mb-28"
-          :class="item.removeMargin !== 'yes' ? 'mb-14' : 'mb-6'"
+          class="grid-item lg:w-1/2 px-8"
+          :class="[item.removeMargin !== 'yes' ? 'mb-14' : 'mb-6',  i === slice.items.length - 1 ? 'mb-0' : 'lg:mb-28']"
         >
           <prismic-rich-text
             :field="item.text"
@@ -101,6 +101,6 @@ export default {
 }
 
 .text-grid__h--sm {
-  @apply uppercase lg:text-xl font-bold tracking-wide;
+  @apply uppercase lg:text-xl font-bold tracking-wide lg:mb-16;
 }
 </style>
