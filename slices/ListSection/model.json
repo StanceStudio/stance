@@ -19,6 +19,18 @@
             "single": "heading2"
           },
           "type": "StructuredText"
+        },
+        "headingStyle": {
+          "config": {
+            "label": "Heading Style",
+            "placeholder": "",
+            "options": [
+              "large",
+              "small"
+            ],
+            "default_value": "large"
+          },
+          "type": "Select"
         }
       },
       "items": {

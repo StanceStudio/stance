@@ -19,6 +19,27 @@
             "single": "heading2"
           },
           "type": "StructuredText"
+        },
+        "subheading": {
+          "config": {
+            "label": "Subheading",
+            "placeholder": "Optional subheading",
+            "allowTargetBlank": true,
+            "multi": "paragraph,hyperlink"
+          },
+          "type": "StructuredText"
+        },
+        "headingStyle": {
+          "config": {
+            "label": "Heading Style",
+            "placeholder": "",
+            "options": [
+              "large",
+              "small"
+            ],
+            "default_value": "large"
+          },
+          "type": "Select"
         }
       },
       "items": {}

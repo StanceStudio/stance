@@ -6,7 +6,7 @@
     <header>
       <prismic-rich-text
         :field="slice.primary.subheading"
-        class="uppercase text-md lg:text-xl mb-12 font-bold tracking-wide"
+        class="uppercase lg:text-xl mb-12 font-bold tracking-wide"
       />
     </header>
     <div class="flex flex-wrap lg:w-11/12 mx-auto">

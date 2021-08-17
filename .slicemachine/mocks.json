@@ -65,6 +65,12 @@
       },
       "image": {
         "content": "https://images.prismic.io/stance/e4962ae2-9a48-4ca7-bd94-e84b0481fd2b_fade.png"
+      },
+      "subheading": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
       }
     }
   },
@@ -148,6 +154,12 @@
         "config": {
           "patternType": "HEADING",
           "blocks": 2
+        }
+      },
+      "subheading": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
         }
       }
     }

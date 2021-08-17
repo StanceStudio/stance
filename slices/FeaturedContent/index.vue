@@ -3,7 +3,7 @@
     class="section py-20 lg:py-40 flex flex-col items-center px-8 text-center"
   >
     <header
-      class="uppercase text-md lg:text-xl mb-8 lg:mb-12 font-bold tracking-wide"
+      class="uppercase lg:text-xl mb-8 lg:mb-12 font-bold tracking-wide"
     >
       <prismic-rich-text :field="slice.primary.subheading" />
     </header>

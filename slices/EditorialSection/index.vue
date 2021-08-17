@@ -6,10 +6,16 @@
     <div class="lg:w-10/12 mx-auto px-8">
       <header
         class="mb-8 lg:px-24 lg:mb-24 lg:mt-2"
-        v-if="$prismic.asText(slice.primary.heading) !== ''"
+        v-if="$prismic.asText(slice.primary.heading) !== '' || $prismic.asText(slice.primary.subheading) !== ''"
       >
         <prismic-rich-text
+          :field="slice.primary.subheading"
+          v-if="$prismic.asText(slice.primary.subheading) !== ''"
+          class="uppercase lg:text-xl mb-12 lg:mb-24 font-bold tracking-wide text-center"
+        />
+        <prismic-rich-text
           :field="slice.primary.heading"
+          v-if="$prismic.asText(slice.primary.heading) !== ''"
           class="font-serif text-center text-3xl lg:text-6xl lg:leading-tight"
         />
       </header>

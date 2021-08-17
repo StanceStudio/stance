@@ -9,15 +9,23 @@
       "heading": [
         {
           "type": "heading2",
-          "text": "Unleash sexy schemas",
+          "text": "Syndicate collaborative infrastructures",
           "spans": []
         },
         {
           "type": "heading2",
-          "text": "Benchmark ubiquitous functionalities",
+          "text": "E-enable value-added web-readiness",
           "spans": []
         }
-      ]
+      ],
+      "subheading": [
+        {
+          "type": "paragraph",
+          "text": "Dolore enim in cillum eu et sint veniam esse est elit cupidatat dolor.",
+          "spans": []
+        }
+      ],
+      "headingStyle": "large"
     },
     "items": [],
     "slice_type": "heading_section"

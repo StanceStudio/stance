@@ -9,67 +9,26 @@
       "heading": [
         {
           "type": "heading2",
-          "text": "Streamline bricks-and-clicks architectures",
+          "text": "Optimize innovative infomediaries",
           "spans": []
         }
       ],
-      "backgroundColor": "white"
+      "backgroundColor": "white",
+      "headingStyle": "large"
     },
     "items": [
       {
         "text": [
           {
             "type": "paragraph",
-            "text": "Nulla sint anim ut commodo. Nisi minim esse excepteur non ipsum est nostrud pariatur deserunt duis reprehenderit elit minim.",
+            "text": "Excepteur quis duis fugiat mollit nisi consectetur aliquip quis. Sint esse consectetur aliqua fugiat.",
             "spans": []
           }
         ],
         "ctaText": [
           {
             "type": "paragraph",
-            "text": "Ex ut velit pariatur quis ea. Esse aliquip incididunt fugiat sunt deserunt quis nulla eiusmod. Do occaecat laborum nulla.",
-            "spans": []
-          }
-        ],
-        "ctaLink": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "removeMargin": "no"
-      },
-      {
-        "text": [
-          {
-            "type": "paragraph",
-            "text": "Incididunt ut voluptate laborum adipisicing incididunt. Duis veniam voluptate amet elit Lorem. Commodo fugiat non cillum eu consectetur cupidatat ea dolore ex anim Lorem magna velit adipisicing nostrud.",
-            "spans": []
-          }
-        ],
-        "ctaText": [
-          {
-            "type": "paragraph",
-            "text": "Nostrud dolor magna aliqua incididunt. Veniam commodo consequat fugiat incididunt aute tempor ut elit consequat. Velit ullamco officia culpa enim nostrud pariatur mollit Lorem incididunt sit fugiat sit dolore incididunt laborum.",
-            "spans": []
-          }
-        ],
-        "ctaLink": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "removeMargin": "yes"
-      },
-      {
-        "text": [
-          {
-            "type": "paragraph",
-            "text": "Proident id eu dolore enim ullamco dolor in.",
-            "spans": []
-          }
-        ],
-        "ctaText": [
-          {
-            "type": "paragraph",
-            "text": "Officia officia adipisicing ex aliquip velit aute amet. Voluptate anim dolore eu dolore est consequat tempor laborum est qui culpa cillum eiusmod duis do.",
+            "text": "Esse nisi ea sunt velit officia sit tempor pariatur.",
             "spans": []
           }
         ],
@@ -77,20 +36,41 @@
           "link_type": "Web",
           "url": "http://google.com"
         },
-        "removeMargin": "no"
+        "removeMargin": "yes"
       },
       {
         "text": [
           {
             "type": "paragraph",
-            "text": "Deserunt adipisicing duis anim in dolore velit reprehenderit excepteur ipsum magna sit ullamco aute pariatur veniam. Laborum sit qui irure velit officia officia irure. Cillum non non occaecat officia tempor sit officia.",
+            "text": "Pariatur ea culpa nulla. Cillum consequat occaecat occaecat non laboris consectetur. Enim est minim minim incididunt nulla adipisicing consequat reprehenderit qui enim.",
             "spans": []
           }
         ],
         "ctaText": [
           {
             "type": "paragraph",
-            "text": "Irure reprehenderit officia tempor dolore eiusmod nulla exercitation incididunt ad laboris sint. Sit dolore exercitation duis amet.",
+            "text": "Aliqua anim reprehenderit ex id eiusmod. Adipisicing enim enim minim ut. Do sit sunt officia et laboris minim commodo non fugiat.",
+            "spans": []
+          }
+        ],
+        "ctaLink": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "removeMargin": "no"
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Sint enim voluptate labore duis ullamco enim ad. Mollit cupidatat officia enim ut fugiat eu voluptate laborum. In cillum elit ipsum id est magna culpa occaecat laborum cupidatat.",
+            "spans": []
+          }
+        ],
+        "ctaText": [
+          {
+            "type": "paragraph",
+            "text": "Enim sint amet occaecat nostrud culpa duis deserunt dolor cupidatat voluptate ex cupidatat incididunt esse. Ex duis ut minim. Ea fugiat nisi amet et dolore sint non ex in nostrud ipsum.",
             "spans": []
           }
         ],
@@ -98,7 +78,49 @@
           "link_type": "Web",
           "url": "https://slicemachine.dev"
         },
-        "removeMargin": "yes"
+        "removeMargin": "no"
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Fugiat velit ut exercitation mollit et et consequat. Et deserunt nisi in non adipisicing consectetur eiusmod do ut mollit officia.",
+            "spans": []
+          }
+        ],
+        "ctaText": [
+          {
+            "type": "paragraph",
+            "text": "Velit ullamco ut magna ex quis eu. Sint est in sint qui culpa irure consectetur consectetur dolore aliquip. Cillum labore velit do do do.",
+            "spans": []
+          }
+        ],
+        "ctaLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "removeMargin": "no"
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Pariatur excepteur anim sit officia sunt proident quis. Dolore quis adipisicing dolor ullamco labore aliqua commodo nisi.",
+            "spans": []
+          }
+        ],
+        "ctaText": [
+          {
+            "type": "paragraph",
+            "text": "Fugiat mollit sit labore occaecat culpa cillum officia do eu ipsum exercitation esse quis sint. Proident ipsum do culpa cupidatat quis et sit et eiusmod magna ex.",
+            "spans": []
+          }
+        ],
+        "ctaLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "removeMargin": "no"
       }
     ],
     "slice_type": "text_grid"

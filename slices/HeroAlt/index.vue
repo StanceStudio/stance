@@ -6,7 +6,7 @@
     <div class="lg:w-3/5 mx-auto px-8">
       <prismic-rich-text
         :field="slice.primary.subheading"
-        class="hero__subheading opacity-0 transform translate-y-3 uppercase text-md text-center lg:text-lg mb-8 font-bold tracking-wide"
+        class="hero__subheading opacity-0 transform translate-y-3 uppercase text-center lg:text-lg mb-8 font-bold tracking-wide"
         :class="{'transform-none opacity-100': loaded}"
       />
       <prismic-rich-text
@@ -16,7 +16,7 @@
       />
       <prismic-rich-text
         :field="slice.primary.text"
-        class="hero__text max-w-prose mx-auto opacity-0 text-md transform translate-y-3 text-center lg:text-lg font-medium lg:px-10 w-full md:w-4/6 lg:w-full"
+        class="hero__text max-w-prose mx-auto opacity-0 transform translate-y-3 text-center lg:text-lg font-medium lg:px-10 w-full md:w-4/6 lg:w-full"
         :class="{'transform-none opacity-100': loaded}"
       />
     </div>

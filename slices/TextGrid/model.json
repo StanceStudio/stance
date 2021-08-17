@@ -24,11 +24,24 @@
           "config": {
             "label": "Background Color",
             "placeholder": "",
+            "default_value": "white",
             "options": [
               "white",
-              "magenta-light"
-            ],
-            "default_value": "white"
+              "magenta-light",
+              "green"
+            ]
+          },
+          "type": "Select"
+        },
+        "headingStyle": {
+          "config": {
+            "label": "Heading Style",
+            "placeholder": "Choose heading style",
+            "default_value": "large",
+            "options": [
+              "large",
+              "small"
+            ]
           },
           "type": "Select"
         }

@@ -19,6 +19,15 @@
           },
           "type": "Image"
         },
+        "subheading": {
+          "config": {
+            "label": "Subheading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
         "heading": {
           "config": {
             "label": "Heading",

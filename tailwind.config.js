@@ -33,8 +33,10 @@ module.exports = {
     },
     colors: {
       transparent: "transparent",
+      white: "#ffffff",
       current: "currentColor",
       violet: "#c9c1e0",
+      green: "#1E514E",
       magenta : {
         light: '#f8e3ff',
         DEFAULT: "#cd3df6",
