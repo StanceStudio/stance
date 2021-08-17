@@ -23,7 +23,14 @@
           >
             <prismic-link
               :field="menuLink.link"
-              class="py-3 px-8 lg:px-4 font-medium hover:text-magenta transition-colors"
+              class="
+                py-3
+                px-8
+                lg:px-4
+                font-medium
+                hover:text-magenta
+                transition-colors
+              "
               @click.native="openNav = false"
               >{{ $prismic.asText(menuLink.label) }}</prismic-link
             >
@@ -69,31 +76,35 @@ export default {
   },
 
   mounted() {
-    let lastScroll = 0;
-
-    window.addEventListener("scroll", () => {
-      const currentScroll = window.pageYOffset;
-      if (currentScroll <= 0) {
-        this.scrollingUp = true;
-        return;
-      }
-
-      if (currentScroll > lastScroll && !this.scrollingDown) {
-        // down
-        this.scrollingDown = true;
-        this.scrollingUp = false;
-      } else if (currentScroll < lastScroll && this.scrollingDown) {
-        // up
-        this.scrollingDown = false;
-        this.scrollingUp = true;
-      }
-      lastScroll = currentScroll;
-    });
+    this.onScroll();
   },
 
   methods: {
     toggleNav() {
       this.openNav = !this.openNav;
+    },
+
+    onScroll() {
+      let lastScroll = 0;
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll <= 0) {
+          this.scrollingUp = true;
+          return;
+        }
+
+        if (currentScroll > lastScroll && !this.scrollingDown) {
+          // down
+          this.scrollingDown = true;
+          this.scrollingUp = false;
+        } else if (currentScroll < lastScroll && this.scrollingDown) {
+          // up
+          this.scrollingDown = false;
+          this.scrollingUp = true;
+        }
+        lastScroll = currentScroll;
+      });
     },
   },
 };
