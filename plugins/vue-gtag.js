@@ -6,7 +6,7 @@ export default ({ app }) => {
     VueGtag,
     {
       config: { id: "UA-152783995-1" },
-      appName: "le-pavillon",
+      appName: "stance",
     },
     app.router
   );
