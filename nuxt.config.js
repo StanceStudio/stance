@@ -90,12 +90,16 @@ export default {
   plugins: [
     {
       src: "~/plugins/prismicLinks",
-      ssr: false,
+      mode: 'client'
     },
     {
       src: "~/plugins/backgroundVideo",
-      ssr: false,
+      mode: 'client'
     },
+    {
+      src: "~/plugins/vue-gtag",
+      mode: 'client'
+    }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
