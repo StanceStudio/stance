@@ -107,7 +107,7 @@ export default {
     "@nuxtjs/svg",
     "@nuxtjs/google-fonts",
     "nuxt-lazysizes",
-    "@nuxtjs/google-analytics",
+    // "@nuxtjs/google-analytics",
     "@/modules/sitemapRouteGenerator",
   ],
 
@@ -170,9 +170,9 @@ export default {
     },
   },
 
-  googleAnalytics: {
-    id: "UA-152783995-1",
-  },
+  // googleAnalytics: {
+  //   id: "UA-152783995-1",
+  // },
 
   sitemap: {
     hostname: "https://stance.design"
