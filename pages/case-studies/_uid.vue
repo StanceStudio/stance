@@ -57,6 +57,11 @@ export default {
           property: "twitter:image",
           content: this.image,
         },
+        {
+          hid: "robots",
+          name: "robots",
+          content: this.meta_no_index === true ? "noindex" : "index"
+        }
       ],
     };
   },
@@ -70,6 +75,7 @@ export default {
         // Page content
         title: result.meta_title || $prismic.asText(result.title),
         description: result.meta_description,
+        meta_no_index: result.meta_no_index,
         image: result.meta_image.url,
         footer: {
           background_image: result.footer_background_image,

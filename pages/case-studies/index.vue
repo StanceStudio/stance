@@ -77,12 +77,14 @@ export default {
       const page = (await $prismic.api.getByUID("page", "case-studies")).data;
 
       // Query to get posts content to preview
-      const posts = await $prismic.api.query(
+      const posts = await $prismic.api.query([
         $prismic.predicates.at("document.type", "case_study"),
+        $prismic.predicates.not("my.case_study.hide_from_archive", true)
+        ],
         { orderings: "[my.case_study.order_date desc]" }
       );
 
-      //console.log(page);
+      //console.log(posts);
 
       return {
         title: page.meta_title || $prismic.asText(page.title),
@@ -98,6 +100,7 @@ export default {
         },
       };
     } catch (e) {
+      console.log(e);
       error({ statusCode: 404, message: "Page not found" });
     }
   },
