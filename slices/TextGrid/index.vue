@@ -1,12 +1,12 @@
 <template>
   <section
     class="text-grid section py-16 lg:py-40"
-    :class="style[slice.primary.backgroundColor]"
+    :class="[style[slice.primary.backgroundColor], {'section--bg': slice.primary.backgroundColor}]"
   >
     <div class="lg:w-11/12 mx-auto px-8">
       <header
         v-if="$prismic.asText(slice.primary.heading) !== ''"
-        class="flex justify-center mb-14 lg:mb-24 lg:mt-2"
+        class="flex justify-center mb-14 lg:mb-24 lg:pt-2"
       >
         <prismic-rich-text
           :field="slice.primary.heading"
@@ -15,18 +15,15 @@
               ? 'text-grid__h--sm'
               : 'text-grid__h--lg'
           "
-          class="
-            text-center
-            lg:w-2/3
-          "
+          class="text-center lg:w-2/3"
         />
       </header>
       <div class="lg:flex lg:flex-wrap -mx-8">
         <div
           v-for="(item, i) in slice.items"
           :key="`slice-item-${i}`"
-          class="grid-item lg:w-1/2 px-8"
-          :class="[item.removeMargin !== 'yes' ? 'mb-14' : 'mb-6',  i === slice.items.length - 1 ? 'mb-0' : 'lg:mb-28']"
+          class="grid-item px-8 lg:w-1/2 lg:mb-28"
+          :class="{'grid-item--remove-margin': item.removeMargin === 'yes'}"
         >
           <prismic-rich-text
             :field="item.text"
@@ -89,13 +86,35 @@ export default {
   }
 }
 
-@screen lg {
-  .grid-item h3 {
+.grid-item h3 {
+  @screen lg {
     @apply text-6xl;
   }
 }
 </style>
 <style lang="postcss" scoped>
+.grid-item:nth-last-of-type(-n + 2) {
+  @screen lg {
+    @apply mb-0;
+  }
+}
+
+.grid-item:not(:last-child) {
+  @screen lg {
+    @apply mb-14;
+  }
+}
+
+.grid-item--remove-margin {
+  @screen lg {
+    @apply mb-6;
+  }
+}
+
+.section--bg+.section--bg {
+  @apply pt-0;
+}
+
 .text-grid__h--lg {
   @apply font-serif text-3xl lg:text-6xl lg:leading-tight;
 }
