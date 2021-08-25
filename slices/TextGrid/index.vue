@@ -100,7 +100,7 @@ export default {
 }
 
 .grid-item:not(:last-child) {
-  @apply mb-12 xl:mb-14;
+  @apply mb-12 xl:mb-24;
 }
 
 .grid-item--remove-margin {
