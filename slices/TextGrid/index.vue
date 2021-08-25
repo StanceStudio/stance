@@ -93,14 +93,14 @@ export default {
 }
 </style>
 <style lang="postcss" scoped>
+.grid-item:not(:last-child) {
+  @apply mb-12 xl:mb-24;
+}
+
 .grid-item:nth-last-of-type(-n + 2) {
   @screen lg {
     @apply mb-0;
   }
-}
-
-.grid-item:not(:last-child) {
-  @apply mb-12 xl:mb-24;
 }
 
 .grid-item--remove-margin {
