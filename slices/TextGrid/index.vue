@@ -100,9 +100,7 @@ export default {
 }
 
 .grid-item:not(:last-child) {
-  @screen lg {
-    @apply mb-14;
-  }
+  @apply mb-12 xl:mb-14;
 }
 
 .grid-item--remove-margin {
