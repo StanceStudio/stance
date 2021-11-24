@@ -27,7 +27,7 @@
         >
           <prismic-rich-text
             :field="item.text"
-            class="links lg:text-xl font-medium leading-relaxed"
+            class="links rich-text lg:text-xl font-medium leading-relaxed"
           />
           <div
             class="mt-8 lg:text-xl"
