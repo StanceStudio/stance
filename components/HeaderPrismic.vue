@@ -110,7 +110,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .site-header {
   @apply transition-all duration-500;
 }
