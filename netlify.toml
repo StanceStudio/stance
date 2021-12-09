@@ -3,3 +3,8 @@
   to = "https://stance.agency/:splat"
   status = 301
   force = true
+[[redirects]]
+  from = "/behaviour-sprint/"
+  to = "/"
+  status = 301
+  force = true
