@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://stance.design/*"
+  to = "https://stance.agency/:splat"
+  status = 301
+  force = true
