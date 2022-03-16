@@ -1,6 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
+ // mode: "jit",
   purge: [
     "./components/**/*.{vue,js}",
     "./layouts/**/*.vue",
@@ -22,9 +23,9 @@ module.exports = {
       '4xl': '2.5rem',
       '5xl': '2.875rem',
       '6xl': '3.75rem',
-      '7xl': '5rem',
-      '8xl': '6rem',
-      '9xl': '8rem',
+      '7xl': '4rem',
+      '8xl': '5rem',
+      '9xl': '6rem',
     },
     fontFamily: {
       body: ['"Manrope"', "sans-serif"],
