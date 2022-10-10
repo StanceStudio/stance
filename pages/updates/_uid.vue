@@ -7,17 +7,7 @@
 </template>
 
 <script>
-import SliceZone from "vue-slicezone";
-import PageFooter from "~/components/PageFooter.vue";
-import FooterPrismic from "~/components/FooterPrismic.vue";
-
 export default {
-  components: {
-    SliceZone,
-    PageFooter,
-    FooterPrismic,
-  },
-
   head() {
     return {
       title: this.title,

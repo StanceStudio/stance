@@ -20,19 +20,7 @@
 </template>
 
 <script>
-import SliceZone from "vue-slicezone";
-import PostWidget from "~/components/PostWidget.vue";
-import PageFooter from "~/components/PageFooter.vue";
-import FooterPrismic from "~/components/FooterPrismic.vue";
-
 export default {
-  components: {
-    SliceZone,
-    PostWidget,
-    PageFooter,
-    FooterPrismic,
-  },
-
   head() {
     return {
       title: this.title,
