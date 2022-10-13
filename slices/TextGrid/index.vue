@@ -1,7 +1,10 @@
 <template>
   <section
     class="text-grid section py-16 lg:py-40"
-    :class="[style[slice.primary.backgroundColor], {'section--bg': slice.primary.backgroundColor}]"
+    :class="[
+      style[slice.primary.backgroundColor],
+      { 'section--bg': slice.primary.backgroundColor },
+    ]"
   >
     <div class="lg:w-11/12 mx-auto px-8">
       <header
@@ -23,7 +26,7 @@
           v-for="(item, i) in slice.items"
           :key="`slice-item-${i}`"
           class="grid-item px-8 lg:w-1/2 lg:mb-28"
-          :class="{'grid-item--remove-margin': item.removeMargin === 'yes'}"
+          :class="{ 'grid-item--remove-margin': item.removeMargin === 'yes' }"
         >
           <prismic-rich-text
             :field="item.text"
@@ -35,13 +38,7 @@
           >
             <prismic-link
               :field="item.ctaLink"
-              class="
-                border-b border-current
-                pb-1
-                hover:text-magenta
-                transition-colors
-                font-bold
-              "
+              class="border-b border-current pb-1 hover:text-magenta transition-colors font-bold"
             >
               {{ $prismic.asText(item.ctaText) }}
             </prismic-link>
@@ -109,7 +106,7 @@ export default {
   }
 }
 
-.section--bg+.section--bg {
+.section--bg + .section--bg {
   @apply pt-0;
 }
 
