@@ -41,7 +41,9 @@
     <!-- Background video -->
     <client-only>
       <video-background
-        v-if="slice.primary.media === 'video' && slice.primary.backgroundVideo.url"
+        v-if="
+          slice.primary.media === 'video' && slice.primary.backgroundVideo.url
+        "
         :src="slice.primary.backgroundVideo.url"
         :sources="[
           {
