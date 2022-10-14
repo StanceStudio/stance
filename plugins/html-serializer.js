@@ -16,12 +16,12 @@ export default function (type, element, content, children) {
     const url = prismicDOM.Link.url(element.data, linkResolver);
 
     if (element.data.link_type === "Document") {
-      result = `<a href="${url}" data-nuxt-link>${content}</a>`;
+      result = `<a href="${url}" data-nuxt-link><span class="link link--active">${content}</span></a>`;
     } else {
       const target = element.data.target
         ? `target="'${element.data.target}'" rel="noopener"`
         : "";
-      result = `<a href="${url}" ${target}>${content}</a>`;
+      result = `<a href="${url}" ${target}><span class="link link--active">${content}</span></a>`;
     }
     return result;
   }
@@ -38,12 +38,12 @@ export default function (type, element, content, children) {
       const url = prismicDOM.Link.url(element.linkTo, linkResolver);
 
       if (element.data.link_type === "Document") {
-        result = `<a href="${url}" data-nuxt-link>${result}</a>`;
+        result = `<a href="${url}" data-nuxt-link><span class="link link--active">${result}</span></a>`;
       } else {
         const target = element.data.target
           ? `target="'${element.data.target}'" rel="noopener"`
           : "";
-        result = `<a href="${url}" ${target}>${result}</a>`;
+        result = `<a href="${url}" ${target}><span class="link link--active">${result}</span></a>`;
       }
     }
     const wrapperClassList = [element.label || "", "block-img"];

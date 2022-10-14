@@ -1,8 +1,13 @@
 <template>
   <div>
-    <slice-zone
+    <!-- <slice-zone
       type="case_study"
       :uid="$route.params.uid"
+      class="min-h-screen"
+    /> -->
+    <slice-zone
+      :components="components"
+      :slices="slices"
       class="min-h-screen"
     />
     <page-footer :data="footer" />
@@ -11,15 +16,11 @@
 </template>
 
 <script>
-import SliceZone from "vue-slicezone";
-import PageFooter from "~/components/PageFooter.vue";
-import FooterPrismic from "~/components/FooterPrismic.vue";
+import { components } from "~/slices";
 
 export default {
-  components: {
-    SliceZone,
-    PageFooter,
-    FooterPrismic,
+  data() {
+    return { components };
   },
 
   head() {
@@ -60,8 +61,8 @@ export default {
         {
           hid: "robots",
           name: "robots",
-          content: this.meta_no_index === true ? "noindex" : "index"
-        }
+          content: this.meta_no_index === true ? "noindex" : "index",
+        },
       ],
     };
   },
@@ -73,6 +74,7 @@ export default {
 
       return {
         // Page content
+        slices: result.slices || result.body,
         title: result.meta_title || $prismic.asText(result.title),
         description: result.meta_description,
         meta_no_index: result.meta_no_index,

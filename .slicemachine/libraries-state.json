@@ -1,0 +1,1245 @@
+{
+  "slices": {
+    "components": {
+      "content_grid": {
+        "library": "slices",
+        "id": "content_grid",
+        "name": "ContentGrid",
+        "description": "ContentGrid",
+        "model": {
+          "id": "content_grid",
+          "type": "SharedSlice",
+          "name": "ContentGrid",
+          "description": "ContentGrid",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ContentGrid",
+              "primary": {
+                "subheading": {
+                  "config": {
+                    "label": "Subheading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  },
+                  "type": "StructuredText"
+                },
+                "backgroundColor": {
+                  "config": {
+                    "label": "Background Color",
+                    "placeholder": "",
+                    "default_value": "white",
+                    "options": [
+                      "white",
+                      "magenta-light"
+                    ]
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {
+                "image": {
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "heading": {
+                  "config": {
+                    "label": "Heading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading3"
+                  },
+                  "type": "StructuredText"
+                },
+                "ctaText": {
+                  "config": {
+                    "label": "CTA Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "ctaLink": {
+                  "config": {
+                    "label": "CTA Link",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  },
+                  "type": "Link"
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {},
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "editorial_section": {
+        "library": "slices",
+        "id": "editorial_section",
+        "name": "EditorialSection",
+        "description": "EditorialSection",
+        "model": {
+          "id": "editorial_section",
+          "type": "SharedSlice",
+          "name": "EditorialSection",
+          "description": "EditorialSection",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "EditorialSection",
+              "primary": {
+                "backgroundImage": {
+                  "config": {
+                    "label": "Background Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "subheading": {
+                  "config": {
+                    "label": "Subheading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "heading": {
+                  "config": {
+                    "label": "Heading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  },
+                  "type": "StructuredText"
+                },
+                "media": {
+                  "config": {
+                    "label": "Media",
+                    "placeholder": "Choose media",
+                    "default_value": "image",
+                    "options": [
+                      "image",
+                      "video"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "image": {
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "video": {
+                  "config": {
+                    "label": "Video",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  },
+                  "type": "Link"
+                },
+                "leadText": {
+                  "config": {
+                    "label": "Lead Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "text": {
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,strong,em,hyperlink"
+                  },
+                  "type": "StructuredText"
+                },
+                "altText": {
+                  "config": {
+                    "label": "Alt Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,em,hyperlink"
+                  },
+                  "type": "StructuredText"
+                },
+                "ctaText": {
+                  "config": {
+                    "label": "CTA Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "ctaLink": {
+                  "config": {
+                    "label": "CTA Link",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  },
+                  "type": "Link"
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {},
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "featured_content": {
+        "library": "slices",
+        "id": "featured_content",
+        "name": "FeaturedContent",
+        "description": "FeaturedContent",
+        "model": {
+          "id": "featured_content",
+          "type": "SharedSlice",
+          "name": "FeaturedContent",
+          "description": "FeaturedContent",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FeaturedContent",
+              "primary": {
+                "subheading": {
+                  "config": {
+                    "label": "Subheading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading3"
+                  },
+                  "type": "StructuredText"
+                },
+                "heading": {
+                  "config": {
+                    "label": "Heading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  },
+                  "type": "StructuredText"
+                },
+                "image": {
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "ctaText": {
+                  "config": {
+                    "label": "CTA Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "link": {
+                  "config": {
+                    "label": "Link",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  },
+                  "type": "Link"
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {},
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "heading_section": {
+        "library": "slices",
+        "id": "heading_section",
+        "name": "HeadingSection",
+        "description": "HeadingSection",
+        "model": {
+          "id": "heading_section",
+          "type": "SharedSlice",
+          "name": "HeadingSection",
+          "description": "HeadingSection",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HeadingSection",
+              "primary": {
+                "heading": {
+                  "config": {
+                    "label": "Heading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  },
+                  "type": "StructuredText"
+                },
+                "subheading": {
+                  "config": {
+                    "label": "Subheading",
+                    "placeholder": "Optional subheading",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,hyperlink"
+                  },
+                  "type": "StructuredText"
+                },
+                "headingStyle": {
+                  "config": {
+                    "label": "Heading Style",
+                    "placeholder": "",
+                    "options": [
+                      "large",
+                      "small"
+                    ],
+                    "default_value": "large"
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {},
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "hero_alt": {
+        "library": "slices",
+        "id": "hero_alt",
+        "name": "HeroAlt",
+        "description": "HeroAlt",
+        "model": {
+          "id": "hero_alt",
+          "type": "SharedSlice",
+          "name": "HeroAlt",
+          "description": "HeroAlt",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HeroAlt",
+              "primary": {
+                "backgroundImage": {
+                  "config": {
+                    "label": "Background Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "subheading": {
+                  "config": {
+                    "label": "Subheading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "heading": {
+                  "config": {
+                    "label": "Heading",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  },
+                  "type": "StructuredText"
+                },
+                "text": {
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {},
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "hero_circle": {
+        "library": "slices",
+        "id": "hero_circle",
+        "name": "HeroCircle",
+        "description": "HeroCircle",
+        "model": {
+          "id": "hero_circle",
+          "type": "SharedSlice",
+          "name": "HeroCircle",
+          "description": "HeroCircle",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HeroCircle",
+              "items": {},
+              "primary": {
+                "heading": {
+                  "config": {
+                    "label": "Heading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "hyperlink"
+                  },
+                  "type": "StructuredText"
+                },
+                "subHeading": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Sub Heading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,strong"
+                  }
+                },
+                "buttonText": {
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "buttonLink": {
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  },
+                  "type": "Link"
+                },
+                "circleMedia": {
+                  "config": {
+                    "label": "Circle Background Media",
+                    "placeholder": "Choose circle background media",
+                    "options": [
+                      "image",
+                      "video"
+                    ],
+                    "default_value": "image"
+                  },
+                  "type": "Select"
+                },
+                "circleBackgroundImage": {
+                  "config": {
+                    "label": "Circle Background Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "circleBackgroundVideo": {
+                  "config": {
+                    "label": "Circle Background Video",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  },
+                  "type": "Link"
+                },
+                "media": {
+                  "config": {
+                    "label": "Background Media",
+                    "placeholder": "Choose background media",
+                    "options": [
+                      "image",
+                      "video"
+                    ],
+                    "default_value": "image"
+                  },
+                  "type": "Select"
+                },
+                "backgroundImage": {
+                  "config": {
+                    "label": "Background Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "backgroundVideo": {
+                  "config": {
+                    "label": "Background Video",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  },
+                  "type": "Link"
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "heading": [
+                {
+                  "type": "paragraph",
+                  "text": "Qui pariatur occaecat qui proident non fugiat anim exercitation Lorem est non.",
+                  "spans": []
+                }
+              ],
+              "subHeading": [
+                {
+                  "type": "paragraph",
+                  "text": "Id cillum magna dolore laborum.",
+                  "spans": []
+                }
+              ],
+              "buttonText": [
+                {
+                  "type": "paragraph",
+                  "text": "Fugiat eiusmod exercitation nisi laborum ut minim dolore laborum consequat magna.",
+                  "spans": []
+                }
+              ],
+              "buttonLink": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              },
+              "circleMedia": "image",
+              "circleBackgroundImage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+              },
+              "circleBackgroundVideo": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              },
+              "media": "image",
+              "backgroundImage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636"
+              },
+              "backgroundVideo": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              }
+            },
+            "slice_type": "hero_circle"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "hero_section": {
+        "library": "slices",
+        "id": "hero_section",
+        "name": "HeroSection",
+        "description": "HeroSection",
+        "model": {
+          "id": "hero_section",
+          "type": "SharedSlice",
+          "name": "HeroSection",
+          "description": "HeroSection",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HeroSection",
+              "items": {},
+              "primary": {
+                "heading": {
+                  "config": {
+                    "label": "Heading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "hyperlink"
+                  },
+                  "type": "StructuredText"
+                },
+                "subHeading": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Sub Heading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "textAlign": {
+                  "type": "Select",
+                  "config": {
+                    "label": "Text Align",
+                    "placeholder": "",
+                    "options": [
+                      "center",
+                      "left"
+                    ],
+                    "default_value": "center"
+                  }
+                },
+                "buttonText": {
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "buttonLink": {
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  },
+                  "type": "Link"
+                },
+                "media": {
+                  "config": {
+                    "label": "Media",
+                    "placeholder": "Choose background media",
+                    "options": [
+                      "image",
+                      "video"
+                    ],
+                    "default_value": "image"
+                  },
+                  "type": "Select"
+                },
+                "backgroundImage": {
+                  "config": {
+                    "label": "Background Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "backgroundVideo": {
+                  "config": {
+                    "label": "Background Video",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  },
+                  "type": "Link"
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "heading": [
+                {
+                  "type": "paragraph",
+                  "text": "Sit exercitation mollit sint ipsum irure non anim cupidatat fugiat aliquip nulla id cillum magna eiusmod. Aliquip aute cillum in aute adipisicing enim consectetur eu et qui.",
+                  "spans": []
+                }
+              ],
+              "subHeading": [
+                {
+                  "type": "paragraph",
+                  "text": "Cupidatat aliqua anim anim elit amet laborum dolore consectetur amet voluptate consequat eiusmod eu pariatur elit. Nisi dolore quis cillum dolor dolore officia eu tempor adipisicing nulla sit enim.",
+                  "spans": []
+                }
+              ],
+              "textAlign": "center",
+              "buttonText": [
+                {
+                  "type": "paragraph",
+                  "text": "Sint sint aliqua duis id sit veniam ex duis quis incididunt ex est veniam. Mollit deserunt magna deserunt non sit id ut adipisicing velit deserunt esse.",
+                  "spans": []
+                }
+              ],
+              "buttonLink": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              },
+              "media": "image",
+              "backgroundImage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb"
+              },
+              "backgroundVideo": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              }
+            },
+            "slice_type": "hero_section"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "image_section": {
+        "library": "slices",
+        "id": "image_section",
+        "name": "ImageSection",
+        "description": "ImageSection",
+        "model": {
+          "id": "image_section",
+          "type": "SharedSlice",
+          "name": "ImageSection",
+          "description": "ImageSection",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ImageSection",
+              "primary": {
+                "image": {
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "width": {
+                  "config": {
+                    "label": "Width",
+                    "placeholder": "",
+                    "options": [
+                      "container",
+                      "full_width"
+                    ],
+                    "default_value": "container"
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {},
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "list_section": {
+        "library": "slices",
+        "id": "list_section",
+        "name": "ListSection",
+        "description": "ListSection",
+        "model": {
+          "id": "list_section",
+          "type": "SharedSlice",
+          "name": "ListSection",
+          "description": "ListSection",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ListSection",
+              "primary": {
+                "heading": {
+                  "config": {
+                    "label": "Heading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  },
+                  "type": "StructuredText"
+                },
+                "headingStyle": {
+                  "config": {
+                    "label": "Heading Style",
+                    "placeholder": "",
+                    "options": [
+                      "large",
+                      "small"
+                    ],
+                    "default_value": "large"
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {
+                "text": {
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,hyperlink,em"
+                  },
+                  "type": "StructuredText"
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {},
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "logos_section": {
+        "library": "slices",
+        "id": "logos_section",
+        "name": "LogosSection",
+        "description": "LogosSection",
+        "model": {
+          "id": "logos_section",
+          "type": "SharedSlice",
+          "name": "LogosSection",
+          "description": "LogosSection",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LogosSection",
+              "primary": {
+                "heading": {
+                  "config": {
+                    "label": "Heading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  },
+                  "type": "StructuredText"
+                },
+                "subheading": {
+                  "config": {
+                    "label": "Sub-Heading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph"
+                  },
+                  "type": "StructuredText"
+                }
+              },
+              "items": {
+                "logo": {
+                  "config": {
+                    "label": "Logo",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "logo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+                }
+              }
+            ],
+            "primary": {
+              "heading": [
+                {
+                  "type": "heading2",
+                  "text": "Personal",
+                  "spans": []
+                }
+              ],
+              "subheading": [
+                {
+                  "type": "paragraph",
+                  "text": "Aliquip minim reprehenderit culpa esse consequat enim sunt eu enim laborum sit irure excepteur eu magna.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "logos_section"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "quote_section": {
+        "library": "slices",
+        "id": "quote_section",
+        "name": "QuoteSection",
+        "description": "QuoteSection",
+        "model": {
+          "id": "quote_section",
+          "type": "SharedSlice",
+          "name": "QuoteSection",
+          "description": "QuoteSection",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "QuoteSection",
+              "primary": {
+                "quote": {
+                  "config": {
+                    "label": "Quote",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "caption": {
+                  "config": {
+                    "label": "Caption",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "image": {
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "backgroundColor": {
+                  "config": {
+                    "label": "Background Color",
+                    "placeholder": "Choose color",
+                    "default_value": "magenta-light",
+                    "options": [
+                      "magenta-light",
+                      "violet",
+                      "white"
+                    ]
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {},
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "text_alt": {
+        "library": "slices",
+        "id": "text_alt",
+        "name": "TextAlt",
+        "description": "TextAlt",
+        "model": {
+          "id": "text_alt",
+          "type": "SharedSlice",
+          "name": "TextAlt",
+          "description": "TextAlt",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TextAlt",
+              "primary": {
+                "text": {
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,heading2,heading3,heading4,heading5,strong,em,hyperlink,list-item,o-list-item"
+                  },
+                  "type": "StructuredText"
+                },
+                "aside": {
+                  "config": {
+                    "label": "Aside",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "heading4,paragraph"
+                  },
+                  "type": "StructuredText"
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {},
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "text_grid": {
+        "library": "slices",
+        "id": "text_grid",
+        "name": "TextGrid",
+        "description": "TextGrid",
+        "model": {
+          "id": "text_grid",
+          "type": "SharedSlice",
+          "name": "TextGrid",
+          "description": "TextGrid",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TextGrid",
+              "primary": {
+                "heading": {
+                  "config": {
+                    "label": "Heading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  },
+                  "type": "StructuredText"
+                },
+                "backgroundColor": {
+                  "config": {
+                    "label": "Background Color",
+                    "placeholder": "",
+                    "default_value": "white",
+                    "options": [
+                      "white",
+                      "magenta-light",
+                      "green"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "headingStyle": {
+                  "config": {
+                    "label": "Heading Style",
+                    "placeholder": "Choose heading style",
+                    "default_value": "large",
+                    "options": [
+                      "large",
+                      "small"
+                    ]
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {
+                "text": {
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "heading3,paragraph,em,hyperlink,list-item,o-list-item,heading4"
+                  },
+                  "type": "StructuredText"
+                },
+                "ctaText": {
+                  "config": {
+                    "label": "CTA Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "ctaLink": {
+                  "config": {
+                    "label": "CTA Link",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  },
+                  "type": "Link"
+                },
+                "removeMargin": {
+                  "config": {
+                    "label": "Remove Bottom Margin",
+                    "placeholder": "",
+                    "default_value": "no",
+                    "options": [
+                      "no",
+                      "yes"
+                    ]
+                  },
+                  "type": "Select"
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {},
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "text_section": {
+        "library": "slices",
+        "id": "text_section",
+        "name": "TextSection",
+        "description": "TextSection",
+        "model": {
+          "id": "text_section",
+          "type": "SharedSlice",
+          "name": "TextSection",
+          "description": "TextSection",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TextSection",
+              "primary": {
+                "text": {
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,strong,em,hyperlink,list-item,o-list-item"
+                  },
+                  "type": "StructuredText"
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {},
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      }
+    }
+  }
+}

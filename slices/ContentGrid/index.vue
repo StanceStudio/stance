@@ -1,42 +1,47 @@
 <template>
   <section
-    class="section pt-20 lg:pt-40 pb-8 px-8 text-center"
+    class="section px-8 pt-20 pb-8 text-center lg:pt-40"
     :class="background[slice.primary.backgroundColor]"
   >
     <header>
       <prismic-rich-text
         :field="slice.primary.subheading"
-        class="uppercase lg:text-xl mb-12 font-bold tracking-wide"
+        class="mb-12 font-bold uppercase tracking-wide lg:text-xl"
       />
     </header>
-    <div class="flex flex-wrap lg:w-11/12 mx-auto">
+    <div class="mx-auto flex flex-wrap lg:w-11/12">
       <div
         v-for="(item, i) in slice.items"
         :key="`slice-item-${i}`"
-        class="lg:w-1/2 px-2 mb-12 text-center"
+        class="mb-12 px-2 text-center lg:w-1/2"
       >
         <prismic-link :field="item.ctaLink">
           <!-- <prismic-image :field="item.image" class="inline-block" /> -->
-          <img
+          <!-- <img
             v-if="item.image.url"
             :data-src="item.image.url"
             class="inline-block lazyload"
             :alt="item.image.alt"
-          />
+          /> -->
+          <responsive-image :data="item.image" />
         </prismic-link>
         <prismic-rich-text
           :field="item.heading"
-          class="font-serif text-2xl lg:text-4xl mb-8 mt-8 lg:mt-12 xl:w-4/5 mx-auto leading-snug"
+          class="mx-auto mb-8 mt-8 font-serif text-2xl leading-snug lg:mt-12 lg:text-4xl xl:w-4/5"
         />
         <div
           class="my-4 lg:text-xl"
           v-if="$prismic.asText(item.ctaText) !== ''"
         >
+          <!-- <prismic-link
+            :field="item.ctaLink"
+            class="border-b border-current pb-1 hover:text-magenta transition-colors font-bold duration-300"
+          > -->
           <prismic-link
             :field="item.ctaLink"
-            class="border-b border-current pb-1 hover:text-magenta transition-colors font-bold"
+            class="font-bold hover:text-magenta"
           >
-            {{ $prismic.asText(item.ctaText) }}
+            <span class="link link--active">{{ $prismic.asText(item.ctaText) }}</span>
           </prismic-link>
         </div>
       </div>

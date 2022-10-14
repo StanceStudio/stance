@@ -1,21 +1,21 @@
 <template>
   <div>
-    <slice-zone type="page" uid="home" class="min-h-screen" />
+    <slice-zone
+      :slices="slices"
+      :components="components"
+      class="min-h-screen"
+    />
     <page-footer :data="footer" />
     <footer-prismic />
   </div>
 </template>
 
 <script>
-import SliceZone from "vue-slicezone";
-import PageFooter from "~/components/PageFooter.vue";
-import FooterPrismic from "~/components/FooterPrismic.vue";
+import { components } from "~/slices";
 
 export default {
-  components: {
-    SliceZone,
-    PageFooter,
-    FooterPrismic,
+  data() {
+    return { components };
   },
 
   head() {
@@ -57,14 +57,15 @@ export default {
     };
   },
 
-  async asyncData({ $prismic, params, error, app }) {
+  async asyncData({ $prismic, error }) {
     try {
       const result = (await $prismic.api.getByUID("page", "home")).data;
 
-      //console.log("page", result);
+      console.log("home page", result);
 
       return {
         // Page content
+        slices: result.slices || result.body,
         title: result.meta_title || $prismic.asText(result.title),
         description: result.meta_description,
         image: result.meta_image.url,

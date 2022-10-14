@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="min-h-screen">
-      <slice-zone type="page" uid="case-studies" />
+      <!-- <slice-zone type="page" uid="case-studies" /> -->
+      <slice-zone :components="components" :slices="slices" />
     </div>
     <!-- Check blog posts exist -->
     <div v-if="posts.length !== 0">
@@ -20,17 +21,11 @@
 </template>
 
 <script>
-import SliceZone from "vue-slicezone";
-import PostWidget from "~/components/PostWidget.vue";
-import PageFooter from "~/components/PageFooter.vue";
-import FooterPrismic from "~/components/FooterPrismic.vue";
+import { components } from "~/slices";
 
 export default {
-  components: {
-    SliceZone,
-    PostWidget,
-    PageFooter,
-    FooterPrismic,
+  data() {
+    return { components };
   },
 
   head() {
@@ -77,9 +72,10 @@ export default {
       const page = (await $prismic.api.getByUID("page", "case-studies")).data;
 
       // Query to get posts content to preview
-      const posts = await $prismic.api.query([
-        $prismic.predicates.at("document.type", "case_study"),
-        $prismic.predicates.not("my.case_study.hide_from_archive", true)
+      const posts = await $prismic.api.query(
+        [
+          $prismic.predicates.at("document.type", "case_study"),
+          $prismic.predicates.not("my.case_study.hide_from_archive", true),
         ],
         { orderings: "[my.case_study.order_date desc]" }
       );
@@ -87,6 +83,7 @@ export default {
       //console.log(posts);
 
       return {
+        slices: page.slices || page.body,
         title: page.meta_title || $prismic.asText(page.title),
         description: page.meta_description,
         image: page.meta_image.url,

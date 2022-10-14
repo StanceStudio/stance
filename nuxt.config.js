@@ -90,16 +90,16 @@ export default {
   plugins: [
     {
       src: "~/plugins/prismicLinks",
-      mode: 'client'
+      mode: "client",
     },
     {
       src: "~/plugins/backgroundVideo",
-      mode: 'client'
+      mode: "client",
     },
     {
       src: "~/plugins/vue-gtag",
-      mode: 'client'
-    }
+      mode: "client",
+    },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -111,6 +111,7 @@ export default {
     "@nuxtjs/svg",
     "@nuxtjs/google-fonts",
     "nuxt-lazysizes",
+    "@nuxt/image",
     // "@nuxtjs/google-analytics",
     "@/modules/sitemapRouteGenerator",
   ],
@@ -132,7 +133,6 @@ export default {
         // }
       },
     ],
-    ["nuxt-sm"],
     ["vue-screen/nuxt"],
     ["@nuxtjs/sitemap"],
   ],
@@ -143,7 +143,7 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    transpile: ["vue-slicezone", "nuxt-sm"],
+    transpile: ["vue-slicezone"],
     postcss: {
       plugins: {
         "postcss-nested": {},
@@ -151,11 +151,10 @@ export default {
     },
   },
 
-  storybook: {
-    stories: ["~/slices/**/*.stories.js"],
+  image: {
+    provider: "prismic",
+    prismic: {},
   },
-
-  ignore: ["**/*.stories.js"],
 
   googleFonts: {
     display: "swap",
@@ -170,6 +169,7 @@ export default {
 
   lazySizes: {
     plugins: {
+      blurUp: true,
       unveilhooks: true,
     },
   },
@@ -179,6 +179,6 @@ export default {
   // },
 
   sitemap: {
-    hostname: "https://stance.design"
-  }
+    hostname: "https://stance.design",
+  },
 };

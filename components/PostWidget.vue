@@ -1,32 +1,35 @@
 <template>
-  <div class="post-item lg:flex items-center">
+  <div class="post-item items-center lg:flex">
     <div class="lg:w-6/12">
       <nuxt-link :to="link">
         <!-- <prismic-image :field="post.data.featured_image" class="inline-block" /> -->
-        <img
+        <!-- <img
             v-if="post.data.featured_image.url"
             :data-src="post.data.featured_image.url"
             class="inline-block lazyload"
             :alt="post.data.featured_image.alt"
-          />
+          /> -->
+        <responsive-image :data="post.data.featured_image" />
       </nuxt-link>
     </div>
-    <div class="lg:w-5/12 lg:pl-24 ml-auto">
+    <div class="ml-auto lg:w-5/12 lg:pl-24">
       <h2
-        class="text-3xl lg:text-5xl font-serif mt-8 lg:mt-0 mb-6 lg:leading-tight"
+        class="mt-8 mb-6 font-serif text-3xl lg:mt-0 lg:text-5xl lg:leading-tight"
       >
         {{ $prismic.asText(post.data.title) }}
       </h2>
       <prismic-rich-text
         v-if="$prismic.asText(post.data.excerpt)"
         :field="post.data.excerpt"
-        class="lg:text-2xl font-medium lg:leading-tight"
+        class="font-medium lg:text-2xl lg:leading-tight"
       />
       <nuxt-link
         :to="link"
-        class="border-b border-current pb-1 hover:text-magenta lg:text-xl font-bold mt-8 inline-block transition-colors"
+        class="mt-8 inline-block font-bold hover:text-magenta lg:text-xl"
       >
-        {{ post.type === "case_study" ? "Read Case Study" : "Read Update" }}
+        <span class="link link--active">{{
+          post.type === "case_study" ? "Read Case Study" : "Read Update"
+        }}</span>
       </nuxt-link>
     </div>
   </div>

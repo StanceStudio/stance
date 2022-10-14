@@ -1,0 +1,40 @@
+{
+  "slices": {
+    "LogosSection": {
+      "default-slice": {
+        "primary": {
+          "subheading": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "HeroSection": {
+      "default-slice": {
+        "primary": {
+          "subHeading": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "HeroCircle": {
+      "default-slice": {
+        "primary": {
+          "subHeading": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

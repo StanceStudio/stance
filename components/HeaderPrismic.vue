@@ -1,18 +1,18 @@
 <template>
   <header
-    class="site-header fixed w-full top-0 left-0 z-20"
+    class="site-header fixed top-0 left-0 z-20 w-full"
     :class="{
       'scroll-up': scrollingUp,
       'scroll-down': scrollingDown,
       'menu-active': openNav,
     }"
   >
-    <div class="flex lg:w-11/12 mx-auto py-8 lg:py-12 items-center px-8">
+    <div class="mx-auto flex items-center py-8 px-8 lg:w-11/12 lg:py-12">
       <nuxt-link
         @click.native="openNav = false"
         to="/"
-        aria-label="Stance Design"
-        class="logo w-24 relative z-10"
+        aria-label="Stance"
+        class="logo relative z-10 w-24"
         ><StanceLogo
       /></nuxt-link>
       <nav class="bg-violet lg:bg-transparent" :class="{ 'is-open': openNav }">
@@ -23,14 +23,7 @@
           >
             <prismic-link
               :field="menuLink.link"
-              class="
-                py-3
-                px-8
-                lg:px-4
-                font-medium
-                hover:text-magenta
-                transition-colors
-              "
+              class="py-3 px-8 font-medium transition-colors duration-300 hover:text-magenta lg:px-4"
               @click.native="openNav = false"
               >{{ $prismic.asText(menuLink.label) }}</prismic-link
             >
@@ -116,7 +109,7 @@ export default {
 }
 
 .scroll-down:not(.menu-active) {
-  @apply transform -translate-y-full;
+  @apply -translate-y-full transform;
 }
 
 .scroll-up:not(.menu-active) {
@@ -128,26 +121,26 @@ export default {
 }
 
 nav {
-  @apply opacity-0 fixed inset-0 pointer-events-none transition-all duration-500;
+  @apply pointer-events-none fixed inset-0 opacity-0 transition-all duration-500;
 }
 
 @screen lg {
   nav {
-    @apply ml-auto relative flex opacity-100 pointer-events-auto;
+    @apply pointer-events-auto relative ml-auto flex opacity-100;
   }
 }
 
 nav.is-open {
-  @apply opacity-100 pointer-events-auto;
+  @apply pointer-events-auto opacity-100;
 }
 
 nav ul {
-  @apply flex-col flex -mr-4 font-serif text-5xl pt-24 leading-tight;
+  @apply -mr-4 flex flex-col pt-24 font-serif text-5xl leading-tight;
 }
 
 @screen lg {
   nav ul {
-    @apply flex-row text-xl font-body pt-0;
+    @apply flex-row pt-0 font-body text-xl;
   }
 }
 
@@ -205,7 +198,7 @@ button {
 }
 
 button span {
-  @apply bg-black block w-full absolute opacity-100 top-1/2;
+  @apply absolute top-1/2 block w-full bg-black opacity-100;
 
   height: 2px;
 
@@ -217,7 +210,7 @@ button span {
 
 button span::before,
 button span::after {
-  @apply absolute w-full h-full;
+  @apply absolute h-full w-full;
 
   content: "";
   top: 0px;

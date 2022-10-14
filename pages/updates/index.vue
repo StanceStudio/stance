@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="min-h-screen">
-      <slice-zone type="page" uid="updates" />
+      <!-- <slice-zone type="page" uid="updates" /> -->
+      <slice-zone
+      :components="components"
+      :slices="slices"
+    />
     </div>
     <!-- Check blog posts exist -->
     <div v-if="posts.length !== 0">
@@ -20,17 +24,11 @@
 </template>
 
 <script>
-import SliceZone from "vue-slicezone";
-import PostWidget from "~/components/PostWidget.vue";
-import PageFooter from "~/components/PageFooter.vue";
-import FooterPrismic from "~/components/FooterPrismic.vue";
+import { components } from "~/slices";
 
 export default {
-  components: {
-    SliceZone,
-    PostWidget,
-    PageFooter,
-    FooterPrismic,
+  data() {
+    return { components };
   },
 
   head() {
@@ -85,6 +83,7 @@ export default {
       //console.log(posts);
 
       return {
+        slices: page.slices || page.body,
         title: page.meta_title || $prismic.asText(page.title),
         description: page.meta_description,
         image: page.meta_image.url,

@@ -2,20 +2,19 @@
   <section
     class="section py-20 lg:py-40 flex flex-col items-center px-8 text-center"
   >
-    <header
-      class="uppercase lg:text-xl mb-8 lg:mb-12 font-bold tracking-wide"
-    >
+    <header class="uppercase lg:text-xl mb-8 lg:mb-12 font-bold tracking-wide">
       <prismic-rich-text :field="slice.primary.subheading" />
     </header>
     <div v-if="slice.primary.image.url" class="lg:w-2/3">
       <prismic-link :field="slice.primary.link">
         <!-- <prismic-image :field="slice.primary.image" class="inline-block"/> -->
-        <img
+        <!-- <img
           v-if="slice.primary.image.url"
           :data-src="slice.primary.image.url"
           class="inline-block lazyload"
           :alt="slice.primary.image.alt"
-        />
+        /> -->
+        <ResponsiveImage :data="slice.primary.image" />
       </prismic-link>
       <prismic-rich-text
         :field="slice.primary.heading"
@@ -28,9 +27,9 @@
     >
       <prismic-link
         :field="slice.primary.link"
-        class="border-b border-current pb-1 hover:text-magenta font-bold transition-colors"
+        class="hover:text-magenta font-bold"
       >
-        {{ $prismic.asText(slice.primary.ctaText) }}
+        <span class="link link--active">{{ $prismic.asText(slice.primary.ctaText) }}</span>
       </prismic-link>
     </div>
   </section>

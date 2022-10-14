@@ -3,112 +3,137 @@
 @tailwind utilities;
 
 html {
-    /* scroll-behavior: smooth; */
+  /* scroll-behavior: smooth; */
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-    @apply appearance-none rounded-none transition-colors 
+  @apply appearance-none rounded-none transition-colors;
 }
 
 .page-enter-active,
 .page-leave-active {
-    @apply transition-opacity duration-500;
+  @apply transition-opacity duration-500;
 }
 
 .page-enter,
 .page-leave-to {
-    @apply opacity-0
+  @apply opacity-0;
 }
 
 [id] {
-    scroll-margin-top: 6rem;
+  scroll-margin-top: 6rem;
 }
 
 em {
-    @apply italic;
+  @apply italic;
+}
+
+.content-ratio {
+  @apply relative h-0 w-full overflow-hidden leading-none bg-magenta-light bg-opacity-50;
+
+  img,
+  iframe,
+  video {
+    @apply absolute left-0 top-0 w-full;
+  }
 }
 
 .rich-text {
-    ul,
-    ol,
-    p {
-        @apply mb-8;
+  ul,
+  ol,
+  p {
+    @apply mb-8;
 
-        @screen lg {
-            @apply text-xl leading-relaxed;
-        }
+    @screen lg {
+      @apply text-xl leading-relaxed;
     }
+  }
 
-    h4 {
-        @apply uppercase font-bold tracking-wide mb-8;
+  h4 {
+    @apply uppercase font-bold tracking-wide mb-8;
 
-        @screen lg {
-            @apply text-lg;
-        }
-    } 
-      
-    ul {
-        @apply list-disc;
+    @screen lg {
+      @apply text-lg;
     }
+  }
 
-    ol {
-        @apply list-decimal;
-    }
-    
-    ol,
-    ul {
-        @apply list-inside;
-    }
+  ul {
+    @apply list-disc;
+  }
 
-    /* ul:last-child,
+  ol {
+    @apply list-decimal;
+  }
+
+  ol,
+  ul {
+    @apply list-inside;
+  }
+
+  /* ul:last-child,
     ol:last-child,
     p:last-child {
         @apply mb-0;
     } */
 }
 
-.rich-text--lg  {
-    ul,
-    ol,
-    p {
-        @apply mb-8;
+.rich-text--lg {
+  ul,
+  ol,
+  p {
+    @apply mb-8;
 
-        @screen lg {
-            @apply text-2xl mb-8;
-        }
+    @screen lg {
+      @apply text-2xl mb-8;
     }
+  }
 
-    h1,
-    h2,
-    h3 {
-        @apply font-serif text-2xl mb-8 leading-snug;
+  h1,
+  h2,
+  h3 {
+    @apply font-serif text-2xl mb-8 leading-snug;
 
-        @screen lg {
-            @apply text-5xl;
-        }
+    @screen lg {
+      @apply text-5xl;
     }
+  }
 }
 
 .links {
-    a {
-        @apply border-current hover:text-magenta transition-colors;
-    }
+  /* a {
+    @apply border-current hover:text-magenta transition-colors duration-300;
+  } */
 
-    a:not([href^="mailto"]) {
-        @apply border-b;
-    }
+  a {
+    @apply hover:text-magenta;
+  }
+
+  /* a:not([href^="mailto"]) {
+    @apply border-b;
+  } */
+}
+
+.link {
+  @apply bg-gradient-to-r from-current to-current bg-[length:0_1px] bg-[left_100%] bg-no-repeat px-0 pt-0 transition-all duration-300;
+}
+
+.link--active,
+.link:hover {
+  @apply bg-[length:100%_1px];
+}
+
+.link.link--active:hover {
+  @apply bg-[length:0_1px];
 }
 
 .lazyload,
 .lazyloading {
-	opacity: 0;
+  @apply opacity-0
 }
 
 .lazyloaded {
-	opacity: 1;
-    /*  transition is applied to lazyloaded not lazyload */
-	transition: opacity 300ms;
+  @apply opacity-100 transition-opacity duration-700;
 }

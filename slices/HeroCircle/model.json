@@ -1,15 +1,15 @@
 {
-  "id": "hero_section",
+  "id": "hero_circle",
   "type": "SharedSlice",
-  "name": "HeroSection",
-  "description": "HeroSection",
+  "name": "HeroCircle",
+  "description": "HeroCircle",
   "variations": [
     {
       "id": "default-slice",
       "name": "Default slice",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "HeroSection",
+      "description": "HeroCircle",
       "items": {},
       "primary": {
         "heading": {
@@ -27,19 +27,7 @@
             "label": "Sub Heading",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph"
-          }
-        },
-        "textAlign": {
-          "type": "Select",
-          "config": {
-            "label": "Text Align",
-            "placeholder": "",
-            "options": [
-              "center",
-              "left"
-            ],
-            "default_value": "center"
+            "single": "paragraph,strong"
           }
         },
         "buttonText": {
@@ -60,9 +48,38 @@
           },
           "type": "Link"
         },
+        "circleMedia": {
+          "config": {
+            "label": "Circle Background Media",
+            "placeholder": "Choose circle background media",
+            "options": [
+              "image",
+              "video"
+            ],
+            "default_value": "image"
+          },
+          "type": "Select"
+        },
+        "circleBackgroundImage": {
+          "config": {
+            "label": "Circle Background Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "circleBackgroundVideo": {
+          "config": {
+            "label": "Circle Background Video",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          },
+          "type": "Link"
+        },
         "media": {
           "config": {
-            "label": "Media",
+            "label": "Background Media",
             "placeholder": "Choose background media",
             "options": [
               "image",

@@ -19,6 +19,15 @@
             "single": "heading2"
           },
           "type": "StructuredText"
+        },
+        "subheading": {
+          "config": {
+            "label": "Sub-Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          },
+          "type": "StructuredText"
         }
       },
       "items": {
@@ -30,7 +39,8 @@
           },
           "type": "Image"
         }
-      }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

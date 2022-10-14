@@ -1,23 +1,23 @@
 <template>
   <section
     class="hero section bg-cover bg-center bg-no-repeat flex flex-col justify-center relative"
-    :style="{backgroundImage: `url(${slice.primary.backgroundImage.url})`}"
+    :style="{ backgroundImage: `url(${slice.primary.backgroundImage.url})` }"
   >
     <div class="lg:w-3/5 mx-auto px-8">
       <prismic-rich-text
         :field="slice.primary.subheading"
         class="hero__subheading opacity-0 transform translate-y-3 uppercase text-center lg:text-lg mb-8 font-bold tracking-wide"
-        :class="{'transform-none opacity-100': loaded}"
+        :class="{ 'translate-y-0 opacity-100': loaded }"
       />
       <prismic-rich-text
         :field="slice.primary.heading"
         class="hero__heading opacity-0 transform translate-y-3 mb-8 text-center text-4xl md:text-6xl xl:text-7xl font-serif lg:leading-tight"
-        :class="{'transform-none opacity-100': loaded}"
+        :class="{ 'translate-y-0 opacity-100': loaded }"
       />
       <prismic-rich-text
         :field="slice.primary.text"
         class="hero__text max-w-prose mx-auto opacity-0 transform translate-y-3 text-center lg:text-lg font-medium lg:px-10 w-full md:w-4/6 lg:w-full"
-        :class="{'transform-none opacity-100': loaded}"
+        :class="{ 'translate-y-0 opacity-100': loaded }"
       />
     </div>
   </section>
@@ -30,23 +30,23 @@ export default {
       type: Object,
       required: true,
       default() {
-        return {}
+        return {};
       },
     },
   },
 
   data() {
     return {
-      loaded: false
-    }
+      loaded: false,
+    };
   },
 
-  mounted() {    
+  mounted() {
     setTimeout(() => {
-        this.loaded = true
+      this.loaded = true;
     }, 250);
   },
-}
+};
 </script>
 
 <style scoped>
@@ -57,7 +57,7 @@ export default {
 .hero__subheading,
 .hero__heading,
 .hero__text {
-  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 650ms
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 650ms;
 }
 
 .hero__heading {
