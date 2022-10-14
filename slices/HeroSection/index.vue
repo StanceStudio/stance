@@ -17,7 +17,7 @@
       />
       <prismic-rich-text
         v-if="$prismic.asText(slice.primary.subHeading) !== ''"
-        class="hero__subheading mt-14 translate-y-3 transform text-xl font-medium opacity-0 transition-all delay-200 duration-700"
+        class="hero__subheading mt-14 translate-y-3 transform text-lg font-medium opacity-0 transition-all delay-200 duration-700 lg:text-xl"
         :field="slice.primary.subHeading"
         :class="{ 'translate-y-0 opacity-100': loaded }"
       />
