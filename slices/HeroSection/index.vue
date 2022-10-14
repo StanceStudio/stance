@@ -1,20 +1,38 @@
 <template>
   <section
-    class="section hero bg-cover bg-center bg-no-repeat flex flex-col justify-center relative"
+    class="section hero relative flex flex-col justify-center bg-cover bg-center bg-no-repeat"
     :style="{ backgroundImage: `url(${slice.primary.backgroundImage.url})` }"
   >
     <!-- Heading -->
-    <prismic-rich-text
-      :field="slice.primary.heading"
-      class="hero__heading transform opacity-0 translate-y-3 px-8 lg:w-2/3 mx-auto text-center text-4xl md:text-6xl lg:text-7xl font-serif leading-tight lg:leading-tight z-10"
-      :class="{ 'transform-none opacity-100': loaded }"
-    />
+    <div
+      class="z-10 mx-auto px-8 lg:w-2/3"
+      :class="[
+        'left' === slice.primary.textAlign ? 'text-left' : 'text-center',
+      ]"
+    >
+      <prismic-rich-text
+        :field="slice.primary.heading"
+        class="hero__heading translate-y-3 transform font-serif text-4xl leading-tight opacity-0 transition-all duration-700 md:text-6xl lg:text-7xl lg:leading-tight"
+        :class="{ 'translate-y-0 opacity-100': loaded }"
+      />
+      <prismic-rich-text
+        v-if="$prismic.asText(slice.primary.subHeading) !== ''"
+        class="hero__subheading mt-14 translate-y-3 transform text-xl font-medium opacity-0 transition-all delay-200 duration-700"
+        :field="slice.primary.subHeading"
+        :class="{ 'translate-y-0 opacity-100': loaded }"
+      />
+    </div>
     <!-- Heading -->
 
     <!-- CTA -->
     <div
-      class="hero__cta opacity-0 absolute bottom-0 left-0 w-full text-center my-12 lg:text-2xl font-medium z-10"
-      :class="{ 'opacity-100': loaded }"
+      class="hero__cta absolute bottom-0 left-0 z-10 my-12 w-full text-center font-medium opacity-0 transition-all delay-500 duration-700 lg:text-2xl"
+      :class="[
+        { 'opacity-100': loaded },
+        $prismic.asText(slice.primary.subHeading) !== ''
+          ? 'delay-300'
+          : 'delay-500',
+      ]"
     >
       <a
         v-if="
@@ -23,17 +41,21 @@
         "
         href="#"
         role="button"
-        class="border-b border-current hover:text-magenta transition-colors"
+        class="hero__cta-link hover:text-magenta"
         @click.prevent="scrollToHash(slice.primary.buttonLink.url)"
       >
-        {{ $prismic.asText(slice.primary.buttonText) }}
+        <span class="link link--active">
+          {{ $prismic.asText(slice.primary.buttonText) }}
+        </span>
       </a>
       <prismic-link
         v-else
         :field="slice.primary.buttonLink"
-        class="border-b border-current hover:text-magenta transition-colors"
+        class="hero__cta-link hover:text-magenta"
       >
-        {{ $prismic.asText(slice.primary.buttonText) }}
+        <span class="link link--active">{{
+          $prismic.asText(slice.primary.buttonText)
+        }}</span>
       </prismic-link>
     </div>
     <!-- CTA -->
@@ -52,7 +74,7 @@
             autoplay: true,
           },
         ]"
-        class="h-full absolute inset-0"
+        class="absolute inset-0 h-full"
       >
       </video-background>
     </client-only>
@@ -98,7 +120,7 @@ export default {
 
     linkEvents() {
       window.addEventListener("scroll", () => {
-        const target = document.querySelector(".hero__cta");
+        const target = this.$el.querySelector(".hero__cta-link");
         if (target) {
           let height = window.innerHeight;
           const scrollTop =
@@ -127,8 +149,9 @@ export default {
   min-height: 100vh;
 }
 
-.hero__heading,
+/* .hero__heading,
+.hero__subheading,
 .hero__cta {
   transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 650ms;
-}
+} */
 </style>

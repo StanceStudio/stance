@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="min-h-screen">
-      <slice-zone type="page" uid="updates" />
+      <!-- <slice-zone type="page" uid="updates" /> -->
+      <slice-zone
+      :components="components"
+      :slices="slices"
+    />
     </div>
     <!-- Check blog posts exist -->
     <div v-if="posts.length !== 0">
@@ -20,7 +24,13 @@
 </template>
 
 <script>
+import { components } from "~/slices";
+
 export default {
+  data() {
+    return { components };
+  },
+
   head() {
     return {
       title: this.title,
@@ -73,6 +83,7 @@ export default {
       //console.log(posts);
 
       return {
+        slices: page.slices || page.body,
         title: page.meta_title || $prismic.asText(page.title),
         description: page.meta_description,
         image: page.meta_image.url,

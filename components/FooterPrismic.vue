@@ -1,30 +1,32 @@
 <template>
   <footer class="site-footer absolute w-full">
     <div
-      class="flex flex-wrap justify-between lg:w-11/12 mx-auto py-4 lg:py-8 items-center px-8"
+      class="mx-auto flex flex-wrap items-center justify-between py-4 px-8 lg:w-11/12 lg:py-8"
     >
       <nuxt-link
         to="/"
-        class="logo w-20 lg:w-24 lg:pb-0"
+        class="logo order-2 w-20 lg:order-1 lg:w-24 lg:pb-0"
         aria-label="Stance Design"
       >
         <StanceLogo />
       </nuxt-link>
       <div
-        v-if="logos.length"
-        class="text-center space-x-5 lg:space-x-10 flex items-center justify-center"
+        v-if="logos.length > 0"
+        class="order-1 flex w-full items-center justify-center space-x-5 px-6 text-center lg:order-2 lg:w-auto lg:space-x-10"
       >
         <div v-for="(logo, i) in logos" :key="`logo-${i}`">
-          <PrismicImage :field="logo.logo" />
+          <PrismicImage :field="logo.logo" class="w-12 lg:w-auto" />
         </div>
       </div>
       <div
         v-else
-        class="text-xs lg:pb-0 lg:text-xl text-right lg:text-center font-semibold"
+        class="order-2 text-right text-xs font-semibold lg:pb-0 lg:text-center lg:text-xl"
       >
         Designing a Sustainable Future Faster
       </div>
-      <div class="copy ml-auto mt-3 md:mt-0 md:ml-0 uppercase font-medium">
+      <div
+        class="copy order-3 ml-auto mt-3 font-medium uppercase md:mt-0 md:ml-0"
+      >
         © Stance {{ date }}
       </div>
     </div>

@@ -7,17 +7,17 @@
       <prismic-rich-text
         :field="slice.primary.subheading"
         class="hero__subheading opacity-0 transform translate-y-3 uppercase text-center lg:text-lg mb-8 font-bold tracking-wide"
-        :class="{ 'transform-none opacity-100': loaded }"
+        :class="{ 'translate-y-0 opacity-100': loaded }"
       />
       <prismic-rich-text
         :field="slice.primary.heading"
         class="hero__heading opacity-0 transform translate-y-3 mb-8 text-center text-4xl md:text-6xl xl:text-7xl font-serif lg:leading-tight"
-        :class="{ 'transform-none opacity-100': loaded }"
+        :class="{ 'translate-y-0 opacity-100': loaded }"
       />
       <prismic-rich-text
         :field="slice.primary.text"
         class="hero__text max-w-prose mx-auto opacity-0 transform translate-y-3 text-center lg:text-lg font-medium lg:px-10 w-full md:w-4/6 lg:w-full"
-        :class="{ 'transform-none opacity-100': loaded }"
+        :class="{ 'translate-y-0 opacity-100': loaded }"
       />
     </div>
   </section>

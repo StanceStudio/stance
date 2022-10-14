@@ -1,13 +1,24 @@
 <template>
   <div>
-    <slice-zone type="update" :uid="$route.params.uid" class="min-h-screen" />
+    <!-- <slice-zone type="update" :uid="$route.params.uid" class="min-h-screen" /> -->
+    <slice-zone
+      :components="components"
+      :slices="slices"
+      class="min-h-screen"
+    />
     <page-footer :data="footer" />
     <footer-prismic />
   </div>
 </template>
 
 <script>
+import { components } from "~/slices";
+
 export default {
+  data() {
+    return { components };
+  },
+
   head() {
     return {
       title: this.title,
@@ -53,6 +64,7 @@ export default {
 
       return {
         // Page content
+        slices: result.slices || result.body,
         title: result.meta_title || $prismic.asText(result.title),
         description: result.meta_description,
         image: result.meta_image.url,

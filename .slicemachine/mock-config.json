@@ -23,6 +23,18 @@
           }
         }
       }
+    },
+    "HeroCircle": {
+      "default-slice": {
+        "primary": {
+          "subHeading": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   }
 }

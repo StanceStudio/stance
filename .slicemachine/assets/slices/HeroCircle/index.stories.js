@@ -1,0 +1,26 @@
+import MyComponent from '../../../../slices/HeroCircle';
+import SliceZone from 'vue-slicezone'
+
+export default {
+  title: 'slices/HeroCircle'
+}
+
+
+export const _DefaultSlice = () => ({
+  components: {
+    MyComponent,
+    SliceZone
+  },
+  methods: {
+    resolve() {
+      return MyComponent
+    }
+  },
+  data() {
+    return {
+      mock: {"variation":"default-slice","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"heading":[{"type":"paragraph","text":"Qui pariatur occaecat qui proident non fugiat anim exercitation Lorem est non.","spans":[]}],"subHeading":[{"type":"paragraph","text":"Id cillum magna dolore laborum.","spans":[]}],"buttonText":[{"type":"paragraph","text":"Fugiat eiusmod exercitation nisi laborum ut minim dolore laborum consequat magna.","spans":[]}],"buttonLink":{"link_type":"Web","url":"https://prismic.io"},"circleMedia":"image","circleBackgroundImage":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1593642633279-1796119d5482"},"circleBackgroundVideo":{"link_type":"Web","url":"https://prismic.io"},"media":"image","backgroundImage":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1587905069134-008460d7a636"},"backgroundVideo":{"link_type":"Web","url":"http://google.com"}},"slice_type":"hero_circle","id":"_DefaultSlice"}
+    }
+  },
+  template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
+})
+_DefaultSlice.storyName = ''

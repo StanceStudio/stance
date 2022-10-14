@@ -1,12 +1,12 @@
 <template>
   <section
     :id="_uid"
-    class="section section-logos py-16 lg:py-40 px-8 bg-magenta-light"
+    class="section section-logos bg-magenta-light py-16 px-8 lg:py-40"
   >
-    <div class="lg:flex lg:space-x-10 lg:w-11/12 mx-auto">
+    <div class="mx-auto lg:flex lg:w-11/12 lg:space-x-10">
       <header
         v-if="$prismic.asText(slice.primary.heading) !== ''"
-        class="flex flex-col mb-14 lg:mb-24 lg:mt-2 lg:w-1/2"
+        class="mb-14 flex flex-col lg:mb-24 lg:mt-2 lg:w-1/2"
       >
         <prismic-rich-text
           :field="slice.primary.heading"
@@ -15,7 +15,7 @@
         <prismic-rich-text
           v-if="$prismic.asText(slice.primary.subheading) !== ''"
           :field="slice.primary.subheading"
-          class="mt-6 text-lg"
+          class="mt-6 text-lg font-medium lg:text-xl"
         />
       </header>
       <div
@@ -24,13 +24,13 @@
         <div
           v-for="(item, i) in slice.items"
           :key="`slice-item-${i}`"
-          class="w-1/2 md:w-3/12 lg:w-1/2 px-1 lg:px-8 py-6 text-center"
+          class="w-1/2 px-1 py-6 text-center md:w-3/12 lg:w-1/2 lg:px-8"
         >
           <!-- <prismic-image :field="item.logo" class="inline-block"/> -->
           <img
             v-if="item.logo.url"
             :data-src="item.logo.url"
-            class="inline-block lazyload"
+            class="lazyload inline-block"
             :alt="item.logo.alt"
           />
         </div>

@@ -1,8 +1,13 @@
 <template>
   <div>
-    <slice-zone
+    <!-- <slice-zone
       type="case_study"
       :uid="$route.params.uid"
+      class="min-h-screen"
+    /> -->
+    <slice-zone
+      :components="components"
+      :slices="slices"
       class="min-h-screen"
     />
     <page-footer :data="footer" />
@@ -11,7 +16,13 @@
 </template>
 
 <script>
+import { components } from "~/slices";
+
 export default {
+  data() {
+    return { components };
+  },
+
   head() {
     return {
       title: this.title,
@@ -50,8 +61,8 @@ export default {
         {
           hid: "robots",
           name: "robots",
-          content: this.meta_no_index === true ? "noindex" : "index"
-        }
+          content: this.meta_no_index === true ? "noindex" : "index",
+        },
       ],
     };
   },
@@ -63,6 +74,7 @@ export default {
 
       return {
         // Page content
+        slices: result.slices || result.body,
         title: result.meta_title || $prismic.asText(result.title),
         description: result.meta_description,
         meta_no_index: result.meta_no_index,

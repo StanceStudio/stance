@@ -27,9 +27,9 @@
     >
       <prismic-link
         :field="slice.primary.link"
-        class="border-b border-current pb-1 hover:text-magenta font-bold transition-colors"
+        class="hover:text-magenta font-bold"
       >
-        {{ $prismic.asText(slice.primary.ctaText) }}
+        <span class="link link--active">{{ $prismic.asText(slice.primary.ctaText) }}</span>
       </prismic-link>
     </div>
   </section>

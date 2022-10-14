@@ -8,13 +8,20 @@
     ]"
   >
     <!-- <prismic-image :field="slice.primary.image" class="w-full" /> -->
-    <img
+    <!-- <img
       v-if="slice.primary.image.url"
       :data-src="slice.primary.image.url"
       class="inline-block lazyload"
-      :class="{'w-full' : slice.primary.width === 'full_width'}"
+      :class="{ 'w-full': slice.primary.width === 'full_width' }"
       :alt="slice.primary.image.alt"
-    />
+    /> -->
+    <div
+      :class="[
+        slice.primary.width === 'full_width' ? 'w-full' : 'lg:w-9/12 mx-auto',
+      ]"
+    >
+      <responsive-image :data="slice.primary.image" />
+    </div>
   </section>
 </template>
 

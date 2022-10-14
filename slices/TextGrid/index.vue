@@ -6,10 +6,10 @@
       { 'section--bg': slice.primary.backgroundColor },
     ]"
   >
-    <div class="lg:w-11/12 mx-auto px-8">
+    <div class="mx-auto px-8 lg:w-11/12">
       <header
         v-if="$prismic.asText(slice.primary.heading) !== ''"
-        class="flex justify-center mb-14 lg:mb-24 lg:pt-2"
+        class="mb-14 flex justify-center lg:mb-24 lg:pt-2"
       >
         <prismic-rich-text
           :field="slice.primary.heading"
@@ -21,16 +21,16 @@
           class="text-center lg:w-2/3"
         />
       </header>
-      <div class="lg:flex lg:flex-wrap -mx-8">
+      <div class="-mx-8 lg:flex lg:flex-wrap">
         <div
           v-for="(item, i) in slice.items"
           :key="`slice-item-${i}`"
-          class="grid-item px-8 lg:w-1/2 lg:mb-28"
+          class="grid-item px-8 lg:mb-28 lg:w-1/2"
           :class="{ 'grid-item--remove-margin': item.removeMargin === 'yes' }"
         >
           <prismic-rich-text
             :field="item.text"
-            class="links rich-text lg:text-xl font-medium leading-relaxed"
+            class="links rich-text font-medium leading-relaxed lg:text-xl"
           />
           <div
             class="mt-8 lg:text-xl"
@@ -38,9 +38,11 @@
           >
             <prismic-link
               :field="item.ctaLink"
-              class="border-b border-current pb-1 hover:text-magenta transition-colors font-bold"
+              class="font-bold hover:text-magenta"
             >
-              {{ $prismic.asText(item.ctaText) }}
+              <span class="link link--active">
+                {{ $prismic.asText(item.ctaText) }}
+              </span>
             </prismic-link>
           </div>
         </div>
@@ -75,11 +77,11 @@ export default {
 <style lang="postcss">
 .grid-item {
   h3 {
-    @apply font-serif text-3xl mb-8 leading-snug;
+    @apply mb-8 font-serif text-3xl leading-snug;
   }
 
   h4 {
-    @apply uppercase text-lg font-bold tracking-wide;
+    @apply text-lg font-bold uppercase tracking-wide;
   }
 }
 
@@ -115,6 +117,6 @@ export default {
 }
 
 .text-grid__h--sm {
-  @apply uppercase lg:text-xl font-bold tracking-wide lg:mb-16;
+  @apply font-bold uppercase tracking-wide lg:mb-16 lg:text-xl;
 }
 </style>

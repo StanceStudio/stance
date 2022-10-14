@@ -32,7 +32,7 @@ em {
 }
 
 .content-ratio {
-  @apply relative h-0 w-full overflow-hidden leading-none;
+  @apply relative h-0 w-full overflow-hidden leading-none bg-magenta-light bg-opacity-50;
 
   img,
   iframe,
@@ -103,22 +103,37 @@ em {
 }
 
 .links {
+  /* a {
+    @apply border-current hover:text-magenta transition-colors duration-300;
+  } */
+
   a {
-    @apply border-current hover:text-magenta transition-colors;
+    @apply hover:text-magenta;
   }
 
-  a:not([href^="mailto"]) {
+  /* a:not([href^="mailto"]) {
     @apply border-b;
-  }
+  } */
+}
+
+.link {
+  @apply bg-gradient-to-r from-current to-current bg-[length:0_1px] bg-[left_100%] bg-no-repeat px-0 pt-0 transition-all duration-300;
+}
+
+.link--active,
+.link:hover {
+  @apply bg-[length:100%_1px];
+}
+
+.link.link--active:hover {
+  @apply bg-[length:0_1px];
 }
 
 .lazyload,
 .lazyloading {
-  opacity: 0;
+  @apply opacity-0
 }
 
 .lazyloaded {
-  opacity: 1;
-  /*  transition is applied to lazyloaded not lazyload */
-  transition: opacity 300ms;
+  @apply opacity-100 transition-opacity duration-700;
 }

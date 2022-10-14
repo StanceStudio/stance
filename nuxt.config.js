@@ -169,6 +169,7 @@ export default {
 
   lazySizes: {
     plugins: {
+      blurUp: true,
       unveilhooks: true,
     },
   },

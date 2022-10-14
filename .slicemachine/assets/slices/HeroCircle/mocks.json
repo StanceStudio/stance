@@ -9,26 +9,39 @@
       "heading": [
         {
           "type": "paragraph",
-          "text": "Sit exercitation mollit sint ipsum irure non anim cupidatat fugiat aliquip nulla id cillum magna eiusmod. Aliquip aute cillum in aute adipisicing enim consectetur eu et qui.",
+          "text": "Qui pariatur occaecat qui proident non fugiat anim exercitation Lorem est non.",
           "spans": []
         }
       ],
       "subHeading": [
         {
           "type": "paragraph",
-          "text": "Cupidatat aliqua anim anim elit amet laborum dolore consectetur amet voluptate consequat eiusmod eu pariatur elit. Nisi dolore quis cillum dolor dolore officia eu tempor adipisicing nulla sit enim.",
+          "text": "Id cillum magna dolore laborum.",
           "spans": []
         }
       ],
-      "textAlign": "center",
       "buttonText": [
         {
           "type": "paragraph",
-          "text": "Sint sint aliqua duis id sit veniam ex duis quis incididunt ex est veniam. Mollit deserunt magna deserunt non sit id ut adipisicing velit deserunt esse.",
+          "text": "Fugiat eiusmod exercitation nisi laborum ut minim dolore laborum consequat magna.",
           "spans": []
         }
       ],
       "buttonLink": {
+        "link_type": "Web",
+        "url": "https://prismic.io"
+      },
+      "circleMedia": "image",
+      "circleBackgroundImage": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+      },
+      "circleBackgroundVideo": {
         "link_type": "Web",
         "url": "https://prismic.io"
       },
@@ -40,13 +53,13 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb"
+        "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636"
       },
       "backgroundVideo": {
         "link_type": "Web",
-        "url": "https://slicemachine.dev"
+        "url": "http://google.com"
       }
     },
-    "slice_type": "hero_section"
+    "slice_type": "hero_circle"
   }
 ]

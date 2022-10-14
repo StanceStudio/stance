@@ -5,6 +5,7 @@ import EditorialSection from './EditorialSection';
 import FeaturedContent from './FeaturedContent';
 import HeadingSection from './HeadingSection';
 import HeroAlt from './HeroAlt';
+import HeroCircle from './HeroCircle';
 import HeroSection from './HeroSection';
 import ImageSection from './ImageSection';
 import ListSection from './ListSection';
@@ -20,6 +21,7 @@ export {
 	FeaturedContent,
 	HeadingSection,
 	HeroAlt,
+	HeroCircle,
 	HeroSection,
 	ImageSection,
 	ListSection,
@@ -36,6 +38,7 @@ export const components = {
 	featured_content: FeaturedContent,
 	heading_section: HeadingSection,
 	hero_alt: HeroAlt,
+	hero_circle: HeroCircle,
 	hero_section: HeroSection,
 	image_section: ImageSection,
 	list_section: ListSection,

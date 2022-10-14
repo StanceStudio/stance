@@ -1,25 +1,28 @@
 <template>
   <section
-    class="section py-20 lg:py-40 bg-cover bg-center bg-no-repeat"
+    class="section bg-cover bg-center bg-no-repeat py-20 lg:py-40"
     :style="sectionStyles"
   >
-    <div class="lg:w-10/12 mx-auto px-8">
+    <div class="mx-auto px-8 lg:w-10/12">
       <header
-        class="mb-8 lg:px-24 lg:mb-24 lg:mt-2"
-        v-if="$prismic.asText(slice.primary.heading) !== '' || $prismic.asText(slice.primary.subheading) !== ''"
+        class="mb-8 lg:mb-24 lg:mt-2 lg:px-24"
+        v-if="
+          $prismic.asText(slice.primary.heading) !== '' ||
+          $prismic.asText(slice.primary.subheading) !== ''
+        "
       >
         <prismic-rich-text
           :field="slice.primary.subheading"
           v-if="$prismic.asText(slice.primary.subheading) !== ''"
-          class="uppercase lg:text-xl mb-12 lg:mb-32 font-bold tracking-wide text-center"
+          class="mb-12 text-center font-bold uppercase tracking-wide lg:mb-32 lg:text-xl"
         />
         <prismic-rich-text
           :field="slice.primary.heading"
           v-if="$prismic.asText(slice.primary.heading) !== ''"
-          class="font-serif text-center text-3xl lg:text-6xl lg:leading-tight"
+          class="text-center font-serif text-3xl lg:text-6xl lg:leading-tight"
         />
       </header>
-      <div class="lg:flex items-center lg:-mx-12">
+      <div class="items-center lg:-mx-12 lg:flex">
         <div
           class="lg:w-1/2 lg:px-12"
           :class="
@@ -40,28 +43,32 @@
             playsinline
             loop
           ></video>
-          <img
+          <!-- <img
             v-else-if="slice.primary.image.url"
             :data-src="slice.primary.image.url"
             class="lazyload"
             :alt="slice.primary.image.alt"
             :id="slice.primary.image.alt | kebabCase"
+          /> -->
+          <responsive-image
+            :data="slice.primary.image"
+            :id="slice.primary.image.alt | kebabCase"
           />
         </div>
-        <div class="lg:w-1/2 lg:px-12 max-w-prose">
+        <div class="max-w-prose lg:w-1/2 lg:px-12">
           <prismic-rich-text
             v-if="$prismic.asText(slice.primary.leadText) !== ''"
             :field="slice.primary.leadText"
-            class="text-xl lg:text-3xl font-serif mb-8"
+            class="mb-8 font-serif text-xl lg:text-3xl"
           />
           <prismic-rich-text
             :field="slice.primary.text"
-            class="rich-text links lg:text-2xl py-3 font-medium"
+            class="rich-text links py-3 font-medium lg:text-2xl"
           />
           <prismic-rich-text
             v-if="$prismic.asText(slice.primary.altText) !== ''"
             :field="slice.primary.altText"
-            class="text-xl lg:text-3xl font-serif mb-8"
+            class="mb-8 font-serif text-xl lg:text-3xl"
           />
           <div
             class="my-4 lg:text-xl"
@@ -69,9 +76,11 @@
           >
             <prismic-link
               :field="slice.primary.ctaLink"
-              class="border-b border-current pb-1 hover:text-magenta transition-colors font-bold"
+              class="font-bold hover:text-magenta"
             >
-              {{ $prismic.asText(slice.primary.ctaText) }}
+              <span class="link link--active">{{
+                $prismic.asText(slice.primary.ctaText)
+              }}</span>
             </prismic-link>
           </div>
         </div>
@@ -115,6 +124,6 @@ export default {
 </script>
 <style scoped>
 video {
-   object-fit: inherit;
+  object-fit: inherit;
 }
 </style>
