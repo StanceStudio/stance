@@ -21,6 +21,7 @@ export default {
   head() {
     return {
       title: this.title,
+      titleTemplate: null,
       meta: [
         { hid: "og:title", property: "og:title", content: this.title },
         {
