@@ -7,12 +7,7 @@
 </template>
 
 <script>
-import HeaderPrismic from "~/components/HeaderPrismic.vue";
-
 export default {
-  components: {
-    HeaderPrismic,
-  },
   head() {
     return {
       title: "Stance",
@@ -20,19 +15,19 @@ export default {
       link: [
         {
           rel: 'canonical',
-          href: `https://stance.design${this.$route.path}`
+          href: `https://stance.agency${this.$route.path}`
         }
       ],
       meta: [
         {
           hid:"og:url",
           property: "og:url",
-          content: `https://stance.design${this.$route.path}`
+          content: `https://stance.agency${this.$route.path}`
         },
         {
           hid:"twitter:url",
           property: "twitter:url",
-          content: `https://stance.design${this.$route.path}`
+          content: `https://stance.agency${this.$route.path}`
         }
       ]
     };
