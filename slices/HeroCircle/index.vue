@@ -133,7 +133,7 @@ export default {
   },
 
   mounted() {
-    this.linkEvents();
+    //this.linkEvents();
 
     setTimeout(() => {
       this.loaded = true;
