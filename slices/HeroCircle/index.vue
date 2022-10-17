@@ -23,7 +23,7 @@
 
           <!-- CTA -->
           <div
-            class="hero__cta absolute bottom-36 translate-y-3 font-medium opacity-0 transition-all delay-500 duration-700 lg:text-xl"
+            class="hero__cta absolute bottom-36 translate-y-3 font-medium opacity-0 transition-all delay-500 duration-700 lg:text-xl xl:bottom-20 2xl:bottom-36"
             :class="[
               { 'translate-y-0 opacity-100': loaded },
               $prismic.asText(slice.primary.subHeading) !== ''
