@@ -43,12 +43,12 @@ export default {
       {
         hid: "og:image",
         property: "og:image",
-        content: "https://stance.design/social-share.png",
+        content: "https://stance.agency/social-share.png",
       },
       {
         hid: "og:url",
         property: "og:url",
-        content: "https://stance.design",
+        content: "https://stance.agency",
       },
       {
         hid: "twitter:card",
@@ -58,7 +58,7 @@ export default {
       {
         hid: "twitter:url",
         property: "twitter:url",
-        content: "https://stance.design",
+        content: "https://stance.agency",
       },
       {
         hid: "twitter:description",
@@ -69,7 +69,7 @@ export default {
       {
         hid: "twitter:image",
         property: "twitter:image",
-        content: "https://stance.design/social-share.png",
+        content: "https://stance.agency/social-share.png",
       },
     ],
     link: [
@@ -96,10 +96,10 @@ export default {
       src: "~/plugins/backgroundVideo",
       mode: "client",
     },
-    {
-      src: "~/plugins/vue-gtag",
-      mode: "client",
-    },
+    // {
+    //   src: "~/plugins/vue-gtag",
+    //   mode: "client",
+    // },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -133,6 +133,7 @@ export default {
         // }
       },
     ],
+    ["@nuxtjs/gtm"],
     ["vue-screen/nuxt"],
     ["@nuxtjs/sitemap"],
   ],
@@ -179,6 +180,12 @@ export default {
   // },
 
   sitemap: {
-    hostname: "https://stance.design",
+    hostname: "https://stance.agency",
   },
+
+  // gtm: {
+  //   enabled: true,
+  //   id: "GTM-TTSCS8K",
+  //   pageTracking: true,
+  // },
 };
