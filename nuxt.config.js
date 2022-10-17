@@ -170,7 +170,7 @@ export default {
 
   lazySizes: {
     plugins: {
-      blurUp: true,
+      // blurUp: true,
       unveilhooks: true,
     },
   },
@@ -183,9 +183,9 @@ export default {
     hostname: "https://stance.agency",
   },
 
-  // gtm: {
-  //   enabled: true,
-  //   id: "GTM-TTSCS8K",
-  //   pageTracking: true,
-  // },
+  gtm: {
+    enabled: true,
+    id: "GTM-TTSCS8K",
+    pageTracking: true,
+  },
 };
