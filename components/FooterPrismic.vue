@@ -11,7 +11,7 @@
         <StanceLogo />
       </nuxt-link>
       <div
-        v-if="logos.length > 0"
+        v-if="logos.length > 0 && display === 'logos'"
         class="order-1 flex w-full items-center justify-center space-x-5 px-6 text-center lg:order-2 lg:w-auto lg:space-x-10"
       >
         <div v-for="(logo, i) in logos" :key="`logo-${i}`">
@@ -19,10 +19,10 @@
         </div>
       </div>
       <div
-        v-else
-        class="order-2 text-right text-xs font-semibold lg:pb-0 lg:text-center lg:text-xl"
+        v-elseif="display === 'copy'"
+        class="order-1 pb-3 text-center text-xs font-semibold lg:order-2 lg:pb-0 lg:text-lg"
       >
-        Designing a Sustainable Future Faster
+        <PrismicRichText :field="copy" />
       </div>
       <div
         class="copy order-3 ml-auto mt-3 font-medium uppercase md:mt-0 md:ml-0"
@@ -47,6 +47,8 @@ export default {
     return {
       date: new Date().getFullYear(),
       logos: [],
+      display: "copy",
+      copy: "",
     };
   },
 
@@ -54,8 +56,10 @@ export default {
     const page = (await this.$prismic.api.getSingle("footer")).data;
 
     this.logos = page.logos;
+    this.copy = page.copy;
+    this.display = page.display;
 
-    console.log(page);
+    //console.log(page);
   },
 };
 </script>
